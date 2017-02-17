@@ -25,10 +25,12 @@ El script 'Filtrado y pegado actividad egreso genactual.r' toma como insumo las 
 
 El script 'ejemplo script fusionador.r' es un primer procedimiento para fusionar en una misma base de datos muchas bases resultantes de 'Filtrado y pegado actividad egreso genactual.r' para un Servicio y varios años.
 
+El script 'fusionador area.r' es el procedimiento para pegar verticalmente las 7 bases del período 1985-2015 de los Servicios del Área Social y Artística en una única base.
+
 El 'Panel de actividades estudiantiles Area Social y Artística 1985-2015' es la base resultante de:
 1) Correr 'Filtrado y pegado actividad egreso genactual.r' para los 7 Servicios del Área Social y Artística para los años 1985 a 2015 inclusive.
 2) Correr 'ejemplo script fusionador.r' para cada uno de los Servicios de forma de tener una base para todo el período por Servicio
-3) Pegar verticalmente estas 7 bases.
+3) Correr 'fusionador area.r' para pegar verticalmente estas 7 bases.
 
 ########Registro de cambios (changelog)
 
