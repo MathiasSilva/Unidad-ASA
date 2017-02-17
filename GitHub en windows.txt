@@ -1,0 +1,23 @@
+#############Configuracion inicial###################
+1)Bajar e instalar GitHub Desktop (https://desktop.github.com/)
+2)Abrir GitHub desde un navegador de internet, iniciar sesion, y buscar el repositorio del proyecto a contribuir (https://github.com/MathiasSilva/Unidad-ASA.git)
+3)Hacer click en "Clone or Download"->Open in Desktop
+4)Ahora deberían haber podido elegir una carpeta donde guardar una copia de los archivos de ese repositorio
+
+##############USO BASICO################
+En la carpeta que se creó en el procedimiento anterior encontras todos los archivos y ramas del repositorio git/proyecto que clonaste.
+Esto es una copia en tu equipo de esos archivos, por lo que ninguna edición se sube al repositorio automáticamente.
+Todo cambio o nuevo archivo que hagas y quieras subir al repositorio se hace de la siguiente manera:
+1)Asegurarse que las nuevas ediciones y archivos estan en la carpeta del repositorio que queres subir
+2)Desde GitHub Desktop ir a la pestaña "changes". Alli debería figurar en el panel de la izquiera una linea con el numero de cambios detectados y un listado de los archivos editados.
+3)Describir brevemente los cambios realizados en el proyecto (e.g., modifique tal cosa/tal linea de tal script)
+4)Elegir la rama del proyecto a la cual subir los archivos y ediciones nuevos (boton de arriba al lado del icono de rama (branch))
+5)Clickear "Commit to.."
+6)Clickear "Sync"
+
+#############SOBRE LAS RAMAS (BRANCHES)#############
+Git es un sistema de control de versiones de archivos. Es una utilidad para poder editar archivos de un proyecto y tener una referencia de la versión actual y las pasadas.
+El uso de ramas permite avanzar sobre la modificación de archivos y componentes del proyecto sin modificar o sobreescribir versiones previas.
+La rama master debería ser la que contiene siempre la última versión funcionando de los archivos y programas del proyecto.
+Las demás ramas que se creen deberían servir para aislar el trabajo en curso de determinados archivos y programas que aún no están totalmente implementados.
+Es importante tener esto en cuenta a la hora de elegir la rama a la cual subir (commit) una edición o archivo al repositorio del proyecto.
