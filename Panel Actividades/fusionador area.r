@@ -1,3 +1,4 @@
+#fusionador area v. 1.0.0
 directorio<-"C:\\Users\\areasocial\\Documents\\Mesareasocial\\Mesareasocial\\Consultas SGB\\Procedimientos\\Bases actividad egreso genactual\\Area Social y Artistica"
 setwd(directorio)
 ccee<-read.csv("C:\\Users\\areasocial\\Documents\\Mesareasocial\\Mesareasocial\\Consultas SGB\\Procedimientos\\Bases actividad egreso genactual\\CCEE\\actividad_egresos_85_15_ccee.csv")

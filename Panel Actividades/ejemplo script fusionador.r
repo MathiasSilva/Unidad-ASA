@@ -1,3 +1,4 @@
+#ejemplo script fusionador v. 1.0.0
 directorio<-"C:\\Users\\areasocial\\Documents\\Mesareasocial\\Mesareasocial\\Consultas SGB\\Procedimientos\\Bases actividad egreso genactual\\Derecho"
 setwd(directorio)
 index1<-seq(1985,2015,1)
