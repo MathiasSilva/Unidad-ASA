@@ -1,10 +1,10 @@
-
+#Filtrado y pegado actividad egreso genactual v. 1.0.0
 #Previo: Tener convertida las bases de g_genactual, g_actividades_de_una_gen, g_egre_anio,y g_carcic, para el año y servicio a usar. Tenerlas todas en una misma carpeta
 #Directorio: directorio de las bases a usar.
 rm(list=ls())
 gc()
 library(plyr)
-directorio<-"C:/Users/Administrativo/Documents/Unidad ASA/ESENCIALES/Bases/Area Social/conversion ccee"
+directorio<-"C:\\Users\\Administrativo\\Documents\\Unidad ASA\\ESENCIALES\\Bases\\Area Social\\conversion fder"
 base_egresos<-"g_egre_anio_1985_2016_conv.csv"
 gen1<-1985
 gen2<-2015
@@ -38,7 +38,7 @@ colnames(EGRESOS_T)<-c("ESTCI","EGRESOS_T")
 genact<-join(genact,EGRESOS_T,by=c("ESTCI"))
 egresosDatosPrimero<-function(x){
 if(sum(x$EGRESOS_T)==0){
-out<-rep(0,7)
+out<-c(x$ESTCI,rep(0,6))
 }
 else{
 out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -47,7 +47,7 @@ return(out)
 }
 egresosDatosSegundo<-function(x){
 if(sum(x$EGRESOS_T)<2){
-out<-rep(0,7)
+out<-c(x$ESTCI,rep(0,6))
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[2]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -56,7 +56,7 @@ return(out)
 }
 egresosDatosTercero<-function(x){
 if(sum(x$EGRESOS_T)<3){
-out<-rep(0,7)
+out<-c(x$ESTCI,rep(0,6))
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[3]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
