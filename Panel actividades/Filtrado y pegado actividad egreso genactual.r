@@ -1,92 +1,95 @@
 
 #Previo: Tener convertida las bases de g_genactual, g_actividades_de_una_gen, g_egre_anio,y g_carcic, para el año y servicio a usar. Tenerlas todas en una misma carpeta
 #Directorio: directorio de las bases a usar.
-#gen: año de generacion de base a convertir
-directorio<-"C:\\Users\\areasocial\\Documents\\Mesareasocial\\Mesareasocial\\Consultas SGB\\Consultas\\Procedimientos\\Filtrado y pegado actividad egreso genactual"
+rm(list=ls())
+gc()
+library(plyr)
+directorio<-"C:/Users/Administrativo/Documents/Unidad ASA/ESENCIALES/Bases/Area Social/conversion ccee"
+base_egresos<-"g_egre_anio_1985_2016_conv.csv"
+gen1<-1985
+gen2<-2015
 setwd(directorio)
-genact<-read.csv("g_gen1990_conv.csv",header=T)
-egresos<-read.csv("g_egre_anio_1957_2016_conv.csv")
+for(j in gen1:gen2){
+gen<-j
+rm(list=ls()[which(ls()%in%c("gen","base_egresos","gen1","gen2")==F)])
+gc()
+genact<-read.csv(paste("g_gen",gen,"_conv.csv",sep=""))
+egresos<-read.csv(base_egresos)
 carreras<-read.csv("g_carcic_conv.csv")
-actividad<-read.csv("g_actividades_de_una_gen_1990_conv.csv")
-gen<-1990
-
+actividad<-read.csv(paste("g_actividades_de_una_gen_",gen,"_conv.csv",sep=""))
+egresos<-egresos[,which(colnames(egresos)!="X")]
+carreras<-carreras[,which(colnames(carreras)!="X")]
+genact<-genact[,which(colnames(genact)!="X")]
+actividad<-actividad[,which(colnames(actividad)!="X")]
 #Pegado con la base de egreso
 #Pegado de base egreso con base carreras#
-ind1<-rep(0,nrow(egresos))
-for(i in 1:nrow(egresos)){
-  ind1[i]<-which(as.character(carreras$NOMCAR)==as.character(egresos$CARRERA[i]))[1]
-}
-ind2<-rep(0,nrow(egresos))
-for(i in 1:nrow(egresos)){
-  ind2[i]<-which(as.character(carreras$NOMCIC)==as.character(egresos$CICLO[i]))[1]
-}
-egresos$CARR<-carreras$CARR[ind1]
-egresos$CIC<-carreras$CICLO[ind2]
-#Identificado de cedulas/nombres de base egresos en base genactual#
-ind3<-which((as.character(egresos$NOMBRE)%in%as.character(genact$NOMBRE)))
-ind4<-rep(0,length(ind3))
-for (i in 1:length(ind3)){
-ind4[i]<-which(as.character(genact$NOMBRE)==as.character(egresos[ind3[i],"NOMBRE"]))
-}
-genact$ANO_EGRESO<-rep(0,dim(genact)[1])
-genact$ANO_EGRESO[ind4]<-egresos[ind3,"ANO_EGRESO"]
-genact$CARR_EGRESO<-rep(0,dim(genact)[1])
-genact$CARR_EGRESO[ind4]<-egresos[ind3,"CARR"]
-genact$CIC_EGRESO<-rep(0,dim(genact)[1])
-genact$CIC_EGRESO[ind4]<-egresos[ind3,"CIC"]
+colnames(carreras)[which(colnames(carreras)=="CICLO")][1]<-"CODCICLO"
+colnames(carreras)[which(colnames(carreras)=="NOMCAR" | colnames(carreras)=="NOMCIC")]<-c("CARRERA","CICLO")
 
+egresos<-join(egresos,carreras,by=c("CARRERA","CICLO"))
+#Identificado de cedulas/nombres de base egresos en base genactual#
+
+genact<-join(genact,egresos,by="NOMBRE")
+colnames(genact)<-c("ESTCI","CI_DIGITO","NOMBRE","DIR","TEL","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","S","LUGAR_NACIMIENTO","FECHA_NACIMIENTO","FECHA_EGRESO","TELEFONO","DIRECCION","MAIL","CODCARR_EGRESO","CODCICLO_EGRESO") 
+#Numero de egresos por estudiante
+egresosCuenta<-function(x){ifelse(dim(table(as.character(x$CARRERA_EGRESO)))==0,0,length(names(table(as.character(x$CARRERA_EGRESO)))))}
+EGRESOS_T<-as.data.frame(as.matrix(ddply(genact,.variables=c("ESTCI"),.fun=egresosCuenta)))
+colnames(EGRESOS_T)<-c("ESTCI","EGRESOS_T")
+genact<-join(genact,EGRESOS_T,by=c("ESTCI"))
+egresosDatosPrimero<-function(x){
+if(sum(x$EGRESOS_T)==0){
+out<-rep(0,7)
+}
+else{
+out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
+}
+return(out)
+}
+egresosDatosSegundo<-function(x){
+if(sum(x$EGRESOS_T)<2){
+out<-rep(0,7)
+}
+else{
+out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[2]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
+}
+return(out)
+}
+egresosDatosTercero<-function(x){
+if(sum(x$EGRESOS_T)<3){
+out<-rep(0,7)
+}
+else{
+out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[3]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
+}
+return(out)
+}
+
+
+PRIMER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosPrimero)))
+SEGUNDO_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosSegundo)))
+TERCER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosTercero)))
+colnames(PRIMER_EGRESO)<-c("ESTCI","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1")
+colnames(SEGUNDO_EGRESO)<-c("ESTCI","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2")
+colnames(TERCER_EGRESO)<-c("ESTCI","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")
+genact<-join(genact,PRIMER_EGRESO,by=c("ESTCI"))
+genact<-join(genact,SEGUNDO_EGRESO,by=c("ESTCI"))
+genact<-join(genact,TERCER_EGRESO,by=c("ESTCI"))
+genact<-genact[,c("ESTCI","CI_DIGITO","NOMBRE","DIR","TEL","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")]
 #Cargado de la base de actividad#
-#mirando solo la generacion que se define como aquellos que tienen base de actividad en el año de g_genactual#
+#mirando solo la generacion que se define como aquellos que tienen inicio de actividades en el año de g_genactual#
 actividad$genact<-ifelse(actividad$ci%in%genact$ESTCI,1,0)
-View(actividad[which(actividad$genact==1),])
+actividad<-actividad[which(actividad$genact==1),]
 #año de la actividad
 actividad$año_act<-round(actividad$fecha/10000)
-#actividades por año para esta definicion de generacion
-table(actividad[which(actividad$genact==1),]$año_act)
-#Cuantos estudiantes tengo en definitiva que estoy seguro son genactual?
-table(duplicated(actividad[which(actividad$genact==1),"ci"]))
-#...1658$
+#identificador unico por persona/servicio
 actividad$ident1<-rep(0,nrow(actividad))
 actividad$ident1[which(actividad$genact==1)]<-ifelse(duplicated(actividad[which(actividad$genact==1),"ci"])==FALSE,1,0)
-
-
-ind5<-rep(0,nrow(actividad))
-for(i in 1:nrow(actividad)){
-ind5[i]<-ifelse(TRUE%in%(genact$ESTCI==actividad$ci[i]),which(genact$ESTCI==actividad$ci[i]),99)
-}
-
-actividad$ANO_EGRESO<-rep(0,nrow(actividad))
-actividad$EN_BASEGEN<-ind5
-actividad$ANO_EGRESO<-genact$ANO_EGRESO[actividad$EN_BASEGEN]
-#for(i in 1:nrow(actividad)){
-#actividad$ANO_EGRESO[i]<-genact$ANO_EGRESO[actividad$EN_BASEGEN[i]]
-#}
-
-
-actividad$CARR_EGRESO<-rep(0,nrow(actividad))
-actividad$CARR_EGRESO<-genact$CARR_EGRESO[actividad$EN_BASEGEN]
-#for(i in 1:nrow(actividad)){
-#actividad$CARR_EGRESO[i]<-genact$CARR_EGRESO[actividad$EN_BASEGEN[i]]
-#}
-
-actividad$CIC_EGRESO<-rep(0,nrow(actividad))
-actividad$CIC_EGRESO<-genact$CIC_EGRESO[actividad$EN_BASEGEN]
-#for(i in 1:nrow(actividad)){
-#actividad$CIC_EGRESO[i]<-genact$CIC_EGRESO[actividad$EN_BASEGEN[i]]
-#}
-
-#Duracion de la carrera#
-actividad$DURACION_EGRESO<-actividad$ANO_EGRESO-gen
+colnames(actividad)[which(colnames(actividad)=="ci")]<-"ESTCI"
+actividad<-join(actividad,genact,by="ESTCI")
+actividad<-actividad[,c("ident1","ESTCI","CI_DIGITO","NOMBRE","carr","ciclo","mat","nota","tipo_act","fecha","año_act","FECHA_EGRESO_1","ANO_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_2","ANO_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")]
 ##############Salida###############
-write.csv(actividad[which(actividad$genact==1),],paste("actividad con egresos filtrada gen ",gen,".csv",sep=""))
-
-
-
-
-
-
-
-
+write.csv(actividad,paste("actividad con egresos filtrada gen ",gen,".csv",sep=""))
+}
 
 
 #Errores de clasificacion?#

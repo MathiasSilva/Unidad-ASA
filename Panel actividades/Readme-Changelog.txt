@@ -34,7 +34,10 @@ El 'Panel de actividades estudiantiles Area Social y Artística 1985-2015' es la
 
 ########Registro de cambios (changelog)
 
-#Versión inicial aún no lanzada
+#3/3/2017 - Version 1.0.0
+-Contiene las actividades de las generaciones 1985 a 2015 inclusive hasta Marzo 2016 exclusive.
+-Se registran hasta los 3 primeros egresos
+
 
 #####################################################################################
     Panel de actividades estudiantiles Area Social y Artística 1985-2015
