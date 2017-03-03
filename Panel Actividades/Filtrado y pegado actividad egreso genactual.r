@@ -38,7 +38,7 @@ colnames(EGRESOS_T)<-c("ESTCI","EGRESOS_T")
 genact<-join(genact,EGRESOS_T,by=c("ESTCI"))
 egresosDatosPrimero<-function(x){
 if(sum(x$EGRESOS_T)==0){
-out<-rep(0,6)
+out<-rep(0,7)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -46,42 +46,35 @@ out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)),c("ESTCI","ANO_EGRESO","CARRER
 return(out)
 }
 egresosDatosSegundo<-function(x){
-if(sum(x$EGRESOS_T)==0){
-out<-rep(0,6)
+if(sum(x$EGRESOS_T)<2){
+out<-rep(0,7)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[2]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
 }
 return(out)
 }
-#egresosDatosTercero<-function(x){
-if(sum(x$EGRESOS_T)==0){
-out<-rep(0,6)
+egresosDatosTercero<-function(x){
+if(sum(x$EGRESOS_T)<3){
+out<-rep(0,7)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[3]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
 }
 return(out)
 }
-#egresosDatosCuarto<-function(x){
-if(sum(x$EGRESOS_T)==0){
-out<-rep(0,6)
-}
-else{
-out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[4]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
-}
-return(out)
-}
 
-PRIMER_EGRESO<-do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosPrimero))
-SEGUNDO_EGRESO<-do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosSegundo))
-#TERCER_EGRESO<-do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosTercero))
-#CUARTO_EGRESO<-do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosCuarto))
+
+PRIMER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosPrimero)))
+SEGUNDO_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosSegundo)))
+TERCER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.fun=egresosDatosTercero)))
 colnames(PRIMER_EGRESO)<-c("ESTCI","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1")
 colnames(SEGUNDO_EGRESO)<-c("ESTCI","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2")
+colnames(TERCER_EGRESO)<-c("ESTCI","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")
 genact<-join(genact,PRIMER_EGRESO,by=c("ESTCI"))
 genact<-join(genact,SEGUNDO_EGRESO,by=c("ESTCI"))
-genact<-genact[,c("ESTCI","CI_DIGITO","NOMBRE","DIR","TEL","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2")]
+genact<-join(genact,TERCER_EGRESO,by=c("ESTCI"))
+genact<-genact[,c("ESTCI","CI_DIGITO","NOMBRE","DIR","TEL","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")]
 #Cargado de la base de actividad#
 #mirando solo la generacion que se define como aquellos que tienen inicio de actividades en el año de g_genactual#
 actividad$genact<-ifelse(actividad$ci%in%genact$ESTCI,1,0)
@@ -93,7 +86,7 @@ actividad$ident1<-rep(0,nrow(actividad))
 actividad$ident1[which(actividad$genact==1)]<-ifelse(duplicated(actividad[which(actividad$genact==1),"ci"])==FALSE,1,0)
 colnames(actividad)[which(colnames(actividad)=="ci")]<-"ESTCI"
 actividad<-join(actividad,genact,by="ESTCI")
-actividad<-actividad[,c("ident1","ESTCI","CI_DIGITO","NOMBRE","carr","ciclo","mat","nota","tipo_act","fecha","año_act","FECHA_EGRESO_1","ANO_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_2","ANO_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2")]
+actividad<-actividad[,c("ident1","ESTCI","CI_DIGITO","NOMBRE","carr","ciclo","mat","nota","tipo_act","fecha","año_act","FECHA_EGRESO_1","ANO_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_2","ANO_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")]
 ##############Salida###############
 write.csv(actividad,paste("actividad con egresos filtrada gen ",gen,".csv",sep=""))
 }
