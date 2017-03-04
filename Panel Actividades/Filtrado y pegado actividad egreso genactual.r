@@ -71,9 +71,9 @@ TERCER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.f
 colnames(PRIMER_EGRESO)<-c("ESTCI","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1")
 colnames(SEGUNDO_EGRESO)<-c("ESTCI","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2")
 colnames(TERCER_EGRESO)<-c("ESTCI","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")
-genact<-join(genact,PRIMER_EGRESO,by=c("ESTCI"))
-genact<-join(genact,SEGUNDO_EGRESO,by=c("ESTCI"))
-genact<-join(genact,TERCER_EGRESO,by=c("ESTCI"))
+genact<-join(genact,PRIMER_EGRESO,by=c("ESTCI"),match="first")
+genact<-join(genact,SEGUNDO_EGRESO,by=c("ESTCI"),match="first")
+genact<-join(genact,TERCER_EGRESO,by=c("ESTCI"),match="first")
 genact<-genact[,c("ESTCI","CI_DIGITO","NOMBRE","DIR","TEL","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")]
 #Cargado de la base de actividad#
 #mirando solo la generacion que se define como aquellos que tienen inicio de actividades en el año de g_genactual#
