@@ -1,6 +1,7 @@
 #Filtrado y pegado actividad egreso genactual v. 1.0.0
 #Previo: Tener convertida las bases de g_genactual, g_actividades_de_una_gen, g_egre_anio,y g_carcic, para el año y servicio a usar. Tenerlas todas en una misma carpeta
 #Directorio: directorio de las bases a usar.
+
 rm(list=ls())
 gc()
 library(plyr)
