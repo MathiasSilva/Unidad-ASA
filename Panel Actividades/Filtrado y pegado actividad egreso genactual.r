@@ -1,7 +1,6 @@
 #Filtrado y pegado actividad egreso genactual v. 1.0.0
 #Previo: Tener convertida las bases de g_genactual, g_actividades_de_una_gen, g_egre_anio,y g_carcic, para el año y servicio a usar. Tenerlas todas en una misma carpeta
 #Directorio: directorio de las bases a usar.
-
 rm(list=ls())
 gc()
 library(plyr)
@@ -37,6 +36,7 @@ egresosCuenta<-function(x){ifelse(dim(table(as.character(x$CARRERA_EGRESO)))==0,
 EGRESOS_T<-as.data.frame(as.matrix(ddply(genact,.variables=c("ESTCI"),.fun=egresosCuenta)))
 colnames(EGRESOS_T)<-c("ESTCI","EGRESOS_T")
 genact<-join(genact,EGRESOS_T,by=c("ESTCI"))
+genact$EGRESOS_T<-as.numeric(as.character(genact$EGRESOS_T))
 egresosDatosPrimero<-function(x){
 if(max(as.numeric(x$EGRESOS_T)-1)==0){
 out<-c(x$ESTCI,rep(0,6))
