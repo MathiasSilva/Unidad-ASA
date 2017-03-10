@@ -38,8 +38,8 @@ colnames(EGRESOS_T)<-c("ESTCI","EGRESOS_T")
 genact<-join(genact,EGRESOS_T,by=c("ESTCI"))
 genact$EGRESOS_T<-as.numeric(as.character(genact$EGRESOS_T))
 egresosDatosPrimero<-function(x){
-if(max(as.numeric(x$EGRESOS_T)-1)==0){
-out<-c(x$ESTCI,rep(0,6))
+if(max(as.numeric(as.character(x$EGRESOS_T)))==0){
+out<-c(as.numeric(as.character(x$ESTCI))[1],0,NA,NA,0,0,0)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)[1]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -47,8 +47,8 @@ out<-x[which(x$FECHA_EGRESO==min(x$FECHA_EGRESO)[1]),c("ESTCI","ANO_EGRESO","CAR
 return(out)
 }
 egresosDatosSegundo<-function(x){
-if(max(as.numeric(x$EGRESOS_T)-1)<2){
-out<-c(x$ESTCI,rep(0,6))
+if(max(as.numeric(as.character(x$EGRESOS_T)))<2){
+out<-c(as.numeric(as.character(x$ESTCI))[1],0,NA,NA,0,0,0)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[2]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -56,8 +56,8 @@ out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[2]),c("ESTCI","ANO_EGRESO","CA
 return(out)
 }
 egresosDatosTercero<-function(x){
-if(max(as.numeric(x$EGRESOS_T)-1)<3){
-out<-c(x$ESTCI,rep(0,6))
+if(max(as.numeric(as.character(x$EGRESOS_T)))<3){
+out<-c(as.numeric(as.character(x$ESTCI))[1],0,NA,NA,0,0,0)
 }
 else{
 out<-x[which(x$FECHA_EGRESO==sort(x$FECHA_EGRESO)[3]),c("ESTCI","ANO_EGRESO","CARRERA_EGRESO","CICLO_EGRESO","FECHA_EGRESO","CODCARR_EGRESO","CODCICLO_EGRESO")]
@@ -72,6 +72,7 @@ TERCER_EGRESO<-as.data.frame(do.call(rbind,dlply(genact,.variables=c("ESTCI"),.f
 colnames(PRIMER_EGRESO)<-c("ESTCI","ANO_EGRESO_1","CARRERA_EGRESO_1","CICLO_EGRESO_1","FECHA_EGRESO_1","CODCARR_EGRESO_1","CODCICLO_EGRESO_1")
 colnames(SEGUNDO_EGRESO)<-c("ESTCI","ANO_EGRESO_2","CARRERA_EGRESO_2","CICLO_EGRESO_2","FECHA_EGRESO_2","CODCARR_EGRESO_2","CODCICLO_EGRESO_2")
 colnames(TERCER_EGRESO)<-c("ESTCI","ANO_EGRESO_3","CARRERA_EGRESO_3","CICLO_EGRESO_3","FECHA_EGRESO_3","CODCARR_EGRESO_3","CODCICLO_EGRESO_3")
+
 genact<-join(genact,PRIMER_EGRESO,by=c("ESTCI"),match="first")
 genact<-join(genact,SEGUNDO_EGRESO,by=c("ESTCI"),match="first")
 genact<-join(genact,TERCER_EGRESO,by=c("ESTCI"),match="first")
