@@ -124,6 +124,47 @@ do "C:\Users\Administrativo\Documents\Mathias\Informes\Segundo Informe Ingresos\
 *tab nocup_mad fac5, col nofreq
 tabout nocup_mad fac5 using "cuadro12.tex", cell(col) style(tex) replace
 
+*Comentario previo al cuadro 5
+do "C:\Users\Administrativo\Documents\Mathias\Informes\Segundo Informe Ingresos\datos y scripts\2011.do"
+cap drop aux1
+g aux1=_N
+sum aux1
+return list
+scalar tot11=r(max)
+sum hora_tra
+return list
+scalar lab11=r(N)
+scalar proplab11=lab11/tot11
+
+tab sit_lab if sit_lab!=1 & sit_lab!=3
+return list
+scalar busca11=r(N)
+tab sit_lab
+return list
+scalar nolab11=r(N)
+scalar propbusca11=busca11/nolab11
+
+do "C:\Users\Administrativo\Documents\Mathias\Informes\Segundo Informe Ingresos\datos y scripts\2015.do"
+
+cap drop aux1
+g aux1=_N
+sum aux1
+return list
+scalar tot15=r(max)
+sum hora_tra if hora_tra!=0
+return list
+scalar lab15=r(N)
+scalar proplab15=lab15/tot15
+
+tab trabaja if trabaja==2
+return list
+scalar busca15=r(N)
+tab trabaja if trabaja!=1
+return list
+scalar nolab15=r(N)
+scalar propbusca15=busca15/nolab15
+
+
 *Figura 5
 do "C:\Users\Administrativo\Documents\Mathias\Informes\Segundo Informe Ingresos\datos y scripts\2011.do"
 graph bar (count) hora_tra2, percentages over(hora_tra) over(fac2,label(angle(45)))  asyvars stack ytitle(% del Total de Inscriptos que trabajan) title("Horas Trabajadas", size(Huge)) graphregion(color(teal))
