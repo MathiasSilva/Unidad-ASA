@@ -34,7 +34,11 @@ El 'Panel de actividades estudiantiles Area Social y Artística 1985-2015' es la
 
 ########Registro de cambios (changelog)
 
-#Versión inicial aún no lanzada
+#22/06/2017 - Primer Compilado
+#Versión 1.0:
+#Periodo 1985-2016
+#Actividades estudiantiles de las generaciones 1985 a 2016 inclusive de todos los servicios del ASA en Mdeo.
+#Identificados hasta 3 egresos por persona por Servicio. 
 
 #####################################################################################
     Panel de actividades estudiantiles Area Social y Artística 1985-2015
