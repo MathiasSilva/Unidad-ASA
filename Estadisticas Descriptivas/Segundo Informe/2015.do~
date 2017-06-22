@@ -32,10 +32,10 @@ replace idcarr=30070 if carrfac==30007000 | carrfac==30007002 | carrfac==3000700
 replace idcarr=30071 if carrfac==30007100 | carrfac==30007105 | carrfac==30007106 | carrfac==30007107 | carrfac==30007108 | carrfac==30007109 | carrfac==30007110 | carrfac==30007111 | carrfac==30007112 | carrfac==30007113 | carrfac==30007114 | carrfac==30007115 |carrfac==30007116 | carrfac==30007117 | carrfac==30007118 | carrfac==30007119 | carrfac==30007120 | carrfac==30007121
 replace idcarr=121   if carrfac==1200109 | carrfac==1200102 | carrfac==1200103 | carrfac==1209001
 replace idcarr=51   if carrfac==500101 | carrfac==500201 | carrfac==501801
-replace idcarr=42 if carrfac==401500 | carrfac==401510 | carrfac==99600606 | carrfac==99605401 | carrfac==99605501 | carrfac==99605601 | carrfac==402400 | carrfac==99000606 | carrfac==99005401 | carrfac==99005501 | carrfac==99005601
+replace idcarr=42 if carrfac==401500 | carrfac==401510 | carrfac==99600606 | carrfac==99605401 | carrfac==99605501 | carrfac==99605601 | carrfac==400201 | carrfac==402400 | carrfac==99000606 | carrfac==99005401 | carrfac==99005501 | carrfac==99005601
 replace idcarr=162   if carrfac==1600202 | carrfac==1600203 | carrfac==1600204 | carrfac==1600205 | carrfac==1600206 | carrfac==1600207 | carrfac==1600208 | carrfac==1600302 | carrfac==1600303 | carrfac==1600802 | carrfac==1600808
 replace idcarr=122   if carrfac==1200209 | carrfac==1209101 | carrfac==1200203 | carrfac==1200202 | carrfac==1202201 | carrfac==1202101
-replace idcarr=6002   if carrfac==60000201 | carrfac==60000101 | carrfac==60000102 | carrfac==60002201 | carrfac==60002400 | carrfac==60004401 | carrfac==402400 | carrfac==400201
+replace idcarr=6002   if carrfac==60000201 | carrfac==60000101 | carrfac==60000102 | carrfac==60002201 | carrfac==60002400 | carrfac==60004401 | carrfac==402400
 replace idcarr=5002   if carrfac==50000101 | carrfac==50000102 | carrfac==50000103 | carrfac==50000105 | carrfac==50000201 | carrfac==50000300 | carrfac==50000301 | carrfac==50000302 | carrfac==50000305 | carrfac==50000306 | carrfac==50000401 | carrfac==50000501 | carrfac==50000601 | carrfac==50009501
 replace idcarr=43 if carrfac==400301 | carrfac==400302 | carrfac==400303
 replace idcarr=123 if carrfac==1200302 | carrfac==1200303 | carrfac==1200309 | carrfac==1209201
