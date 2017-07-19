@@ -1,0 +1,1191 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{setspace}
+%\usepackage{subfigure} % subfiguras
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{afterpage,lscape}
+\usepackage[tableposition=top]{caption}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\newcommand\litem[1]{\item{\bfseries #1\enspace}}
+
+\renewcommand\refname{Referencias} 
+
+\renewcommand{\baselinestretch}{0.2} %interlineado de 0.2 espacio
+\setlength{\parindent}{1cm} %sangria de 0cm
+\title{\begin{huge}
+\textbf{Estadísticas Descriptivas}
+\end{huge} \\ \bigskip \huge Ingresos estudiantiles al Área Social y Artística (2010-2015)
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=2]{Imagenes/LogoUdelaR-colores-oficiales.png}
+\end{center}
+\end{figure}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\large Unidad para el estudio de las trayectorias y desempeño estudiantiles del Área Social y Artística
+\bigskip
+\bigskip
+\large (Versión Preliminar) } \date{Abril - 2017}
+
+
+\begin{document}
+\maketitle
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\afterpage{\blankpage}
+\newpage
+\setlength{\parskip}{0.4cm}
+\tableofcontents
+\setlength{\parskip}{0.2cm}
+\clearpage
+
+\section{Introducción}
+La Mesa del Área Social y Artística en Marzo de 2015 resuelve (Resolución Nº4) dar prioridad a una serie de objetivos, entre los que se encuentran: consolidar los nuevos planes de estudio, atender la situación de masividad y movilidad de los estudiantes y docentes, cubrir las necesidades existentes para la aplicación de los nuevos planes, y dar difusión a las nuevas ofertas de grado. 
+
+En base a los ejes mencionados, se definen ciertas líneas de trabajo, que cuentan con una asignación presupuestal determinada. En este marco, se crean: la Comisión permanente de estudio e implementación de planes y nuevas carreras, el Área de comunicación e información y la Unidad para el estudio de las trayectorias y desempeño estudiantiles.  
+
+Particularmente, con la Unidad para el estudio de las trayectorias y desempeño estudiantiles, se busca generar una unidad académica dependiente del Área Social y Artística (ASA) que coordine con la Dirección General de Planeamiento (DGPlan), de modo de realizar informes periódicos de seguimiento de las trayectorias estudiantiles y realizar evaluaciones académicamente fundadas de los nuevos planes de estudio. 
+
+A través del convenio firmado entre la Unidad y la Dirección General de Planeamiento para la obtención de microdatos del Área Social y Artística es que se realiza el primer informe con los Formularios Estadísticos de Ingreso de todos los Servicios de dicha Área para el período 2010-2015\footnote{La unidad desea agradecer a la Dirección General de Planeamiento por su colaboración y aportes a la elaboración de este informe.}. 
+%En próximas instancias se ampliará el trabajo con la serie anterior y con los datos provenientes del Sistema General de Bedelía, que permitirá analizar la movilidad y trayectorias de los estudiantes del área social y artística.
+
+La educación terciaria universitaria resulta un elemento de suma relevancia en el entendido de que afecta profundamente la economía, la sociedad y la cultura de un país. Presenta efectos sobre el crecimiento económico, el sistema político, la salud, la demografía, la pobreza, la desigualdad, el medio ambiente, el crimen, entre otros. De ahí radica la necesidad de generar información que permita comprender el fenómeno de la educación universitaria y diseñar políticas públicas adecuadas. En ese sentido, el Formulario Estadístico de Ingreso es uno de los instrumentos con que cuenta la UdelaR para el relevamiento de datos. Representa un gran insumo para la caracterización sociodemográfica y de las trayectorias educativas de los estudiantes, si bien no está excento de limitaciones.
+
+El presente trabajo constituye, entonces, un primer producto informativo de la Unidad con el fin de sintetizar información descriptiva sobre los ingresos estudiantiles (recogida en dichos Formularios Estadístico de Ingreso) a los Servicios y Carreras de grado del Área Social y Artística de la Universidad de la República (UdelaR) en el período comprendido entre 2010 y 2015, de acuerdo con los datos disponibles.
+
+%El plan de trabajo de la Unidad apunta a, similar al informe aquí presentado, elaborar una descripción estadística de los Egresos del Área en el mismo período (2010-2015), además de, una vez que se tengan los datos, ampliar el período de análisis para ambos trabajos, abarcando la totalidad del período para el que se podría contar con información de este tipo (2002-2015). Posteriormente, con datos del Sistema de Gestión de Bedelías, se realizaran trabajos académicos sobre trayectorias estudiantiles, desvinculación, y desempeño, y sus determinantes en el Área Social y Artística.  
+
+El informe está estructurado en dos grandes secciones (y un anexo) donde se presentan estadísticas a nivel tanto de Servicios, como del total del Área, de manera de poder realizar comparaciones entre los Servicios y comparaciones con otras Áreas (a partir de los resultados del informe \textit{Estadísticas Básicas 2015} de la Dirección General de Planeamiento,\cite{DGPlan15}). \\
+En la primera sección se muestran variables sociodemográficas tales como sexo, edad y procedencia geográfica, entre otras.\\
+En la segunda, se presentan variables relacionadas con la trayectoria estudiantil y laboral. \\
+
+Además, en el anexo, se presentan resultados similares pero a nivel de Carreras, lo que permite hacer una lectura más detallada de los ingresos estudiantiles a cada Servicio y en particular de los ingresos a Centros Universitarios en el interior del país, facilitando además comparaciones entre Carreras de un mismo Servicio. 
+
+\section{Datos utilizados y período de referencia}
+
+Los datos utilizados para la elaboración de este informe son los Formularios Estadísticos de Ingreso recopilados por la Dirección General de Planeamiento de la UdelaR. Estos formularios son de carácter obligatorio, para todos los estudiantes que se inscriben a alguna Carrera de la UdelaR, por resolución Nº 3 del CDC de fecha 11/03/2003. 
+
+Sin embargo, existen circunstancias en las que, al momento, no se ha implementado como en el caso de algunas Carreras dictadas en  el interior del país, por lo que la cobertura de los ingresos estudiantiles no es total. 
+
+Además, no es posible garantizar que los formularios disponibles (completados post-inscripción a la Carrera) haya sido completado post-controles reliazados por el Servicio de Bedelías (baja de inscripciones condicionales), por lo que los números no necesariamente coincidirán con los presentados en las Estadísticas Básicas (\cite{DGPlan15}) que anualmente publica la DGPlan. 
+
+Por último, los datos no presentan actualización, por lo que, dado que se usan algunas variables que presentan variabilidad en el tiempo, los resultados presentados están limitados al momento particular en que se captaron los datos.
+\footnote{Como referencia general de las diferencias que podrían encontrarse en los resultados, considerando que los datos se recaban en distintos momentos, se estima que solamente un 54.5$\%$ de los estudiantes del Área que completaron el Formulario Estadístico de Ingreso en los años 2010, 2011, o 2012, completaron también el Censo Universitario 2012 (realizado en Setiembre, Octubre, y Noviembre del 2012, y de carácter obligatorio) para la misma Carrera.} 
+
+Otra posible limitante de este trabajo, es que si bien el Formulario Estadístico de Ingreso es de carácter obligatorio, es posible no responder, o dar respuestas inválidas a algunas de las preguntas, por lo que algunos de los estadísticos son calculados sobre un total de observaciones distinto al de otros. En estos casos, el total de observaciones de referencia queda explicitado.
+
+Al momento, la Unidad cuenta con los datos correspondientes a los años 2010 a 2015, por lo que ese constituye el período de referencia para este primer informe. Los formularios intentan abarcar todo el universo, pero las limitaciones existentes generan que los resultados sean muestrales y no necesariamente representativos. De todas formas, constituyen una buena guía del panorama de los ingresos al Área Social y Artística.
+
+Por último, cabe resaltar que construir, a partir de las variables contenidas en los Formularios Estadísticos de Ingreso, dimensiones sobre las cuales clasificar los ingresos estudiantiles al Área con potencial interés comparativo año a año exige, en muchos casos, adoptar criterios de clasificación pensados específicamente con dicho fin. Por eso, la mayoría de las categorizaciones presentadas no responden a ningún marco conceptual concreto, sino que son producto de viabilizar la comparación entre información de formularios de distintos años. 
+
+\section{Ingresos al Área según Características Sociodemográficas}
+
+Previo a comenzar con al presentación de los resultados correspondientes a esta sección, cabe destacar que éstos presentan las siguientes particularidades. Por un lado, no existe un filtro de posibles \textit{re-ingresos} de estudiantes al Área. Es decir, si un estudiante se inscribió a una Carrera en un año y luego se re-inscribe a otra Carrera del mismo Servicio o a otro Servicio del área en otro año, y completa nuevamente el Formulario Estadístico de Ingreso, éste contará como un nuevo estudiante para el Área. Esto se debe a que el período de referencia es demasiado corto como para poder tener una noción clara y un seguimiento de los \textit{re-ingresos}. 
+Por otra parte, se deja constancia de que sí están controladas las inscripciones a varias Carreras de un mismo Servicio en simultáneo para cada estudiante, contando en esos casos como una única inscripción al Servicio. 
+
+%Esta limitante se podrá solucionar a futuro con datos del Sistema de Gestión de Bedelías (SGB) para todos los Servicios del Área.
+
+Cabe destacar, por último, que de acuerdo al informe de Estadísticas Básicas 2015 de DGPlan (\cite{DGPlan15})\footnote{Último dato disponible en la web}, la distribución de ingresos por áreas a nivel de toda la UdelaR es la que se presenta en el siguiente cuadro.
+
+\begin{table}[H]
+\caption{Ingresos estudiantiles 2015 por sexo según Área}
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rrrr}
+		\hline
+		\hline
+\textbf{Área} & Hombres & Mujeres & Total\\
+\hline
+Tecnologías y Ciencias de la Naturaleza y el Hábitat &2398 & 2046 & 4444\\
+&(29.65)&(14.71)&(20.20)\\
+Social y Artística &3496& 6133& 9629\\
+&(43.22)&(44.10)&(43.77)\\
+Ciencias de la Salud& 1826 &5198& 7024\\
+&(22.57)&(37.37)&(31.93)\\
+Carreras Compartidas& 369& 531 &900\\
+&(4.56)&(3.82)&(4.09)\\
+\hline
+Total&8089&13908&21997\\
+&(100)&(100)&(100)\\
+\hline
+\hline
+		\end{tabular}
+		\end{adjustbox}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
+\subsection{Ingresos al Área según Características de los Estudiantes}
+En lo que refiere en particular al Área, y para todo el período considerado en este estudio, el número de estudiantes que ingresan (medido a través de Formularios Estadísticos de Ingreso completados) es de 8752 para el año 2010 y asciende a 9393 para el año 2015.
+En la figura \ref{fig:serie_sexo1} se presentan estos totales, y los de años intermedios, desagregados por \textit{sexo}.
+
+\begin{figure}[H]
+\begin{center}
+\caption{Ingresos estudiantiles anuales al área, por Sexo}
+\fbox{\includegraphics[scale=0.75]{Imagenes/serie_sexo1.png}}
+\label{fig:serie_sexo1}
+\end{center}
+\end{figure}
+
+Se puede observar que, dentro del período 2010-2015 el incremento se va dando levemente año a año, y que se intensifica a partir de 2013. En todos los casos el ingreso de mujeres es más de un 60\% del total.\\
+
+Por otra parte, al incluir en el análisis la variable \textit{edad} y desagregando por \textit{sexo}, se observa que prácticamente no existen diferencias en la distribución de los ingresos estudiantiles al Área, comparando los extremos del período considerado (ver figura \ref{fig:fac_tod_edad}). \\ 
+La mayor diferencia se presenta en la distribución de los hombres en el 2015, donde se da una concentración de ingresos de estudiantes en el entorno de los 23-25 años.
+
+\begin{figure}[H]
+\begin{center}
+\caption{Distribución de ingresos estudiantiles según Edad, por Sexo}
+\fbox{\includegraphics[scale=0.75]{Imagenes/fac_tod_edad.png}}
+\label{fig:fac_tod_edad}
+\end{center}
+\end{figure}
+
+Al analizar la \textit{edad} de los estudiantes al ingreso a cada uno de los Servicios del Área, y comparando los extremos del período considerado, en la figura \ref{fig:nueva_fac_tod_edad} se puede apreciar que para la Facultad de Derecho, Humanidades y Ciencias de la Educación, Escuela Nacional de Bellas Artes y Facultad de Ciencias Sociales, la distribución de esta variable prácticamente no presenta diferencias.\\
+
+Las diferencias más marcadas en cuanto a la distribución de es esta variable se dan en el caso de la Facultad de Ciencias Económicas y de Administración, y Facultad de Información y Comunicación. En ambos casos el rango de edad de ingreso al Servicio aumenta en el año 2015.
+
+\begin{center}
+\begin{figure}[H]
+\caption{Distribución de ingresos estudiantiles según Edad, por Servicio}
+\hspace*{-1.15in}
+\centering{\fbox{\includegraphics[width=1\textwidth]{Imagenes/nueva_fac_tod_edad.png}}}
+\label{fig:nueva_fac_tod_edad}
+\end{figure}
+\end{center}
+
+%La Figura 3 presenta una comparación entre los extremos del período y entre los distintos Servicios del área de las distribuciones de las edades de ingreso de los estudiantes. Se evidencia gráficamente una clara estabilidad de las edades medianas de ingreso a los Servicios del área además de escasos cambios en la distribución de las edades de ingreso a los Servicios.\\
+
+\subsection{Ingresos al Área según Procedencia Geográfica}
+En cuanto a la procedencia geográfica de los estudiantes que ingresan a alguna Carrera de grado del Área, se tiene en consideración el lugar de residencia en el año previo anterior al ingreso.\\
+
+El cuadro \ref{tabla:sencilla1} presenta, para el todo del período 2010-2015, la procedencia geográfica de los estudiantes que ingresaron al Área cada año según el lugar en dónde vivían en Marzo del año previo a la inscripción. Como el año 2010 obtuvo un muy bajo nivel de respuesta para esta pregunta en los formularios, no será tenido en cuenta en el análisis.
+
+\begin{table}[H]
+\caption{Ingresos estudiantiles a Servicios del Área en Montevideo, por año según procedencia geográfica
+%Expresados como porcentaje del total entre paréntesis.
+}
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{r|rrrrr}
+		\hline
+		\hline
+\textbf{Región} &  2011 & 2012 & 2013 & 2014 & 2015\\
+\hline
+Montevideo &  4821 & 5012 & 5083 & 4824 & 5390\\
+ &  (59.18$\%$) & (61.47$\%$) & (60.15$\%$) & (56.26$\%$) & (57.38$\%$)\\  
+Interior &  3225 & 3054 & 3249 & 3641 & 3900\\
+&  (39.59$\%$) & (37.45$\%$) & (38.45$\%$) & (42.46$\%$) & (41.52$\%$)\\
+Exterior &  101 & 88 & 118 & 110 & 103\\
+&  (1.24$\%$) & (1.08$\%$) & (1.40$\%$) & (1.28$\%$) & (1.10$\%$)\\
+\hline
+\textbf{Total} &  \textbf{8147} & \textbf{8154} & \textbf{8450} & \textbf{8575} & \textbf{9393} \\
+\hline
+\hline
+		\end{tabular}
+		\end{adjustbox}
+\label{tabla:sencilla1}
+\end{center}
+\end{table} 
+
+\newpage
+\subsection{Ingresos al Área según Contexto Barrial (Montevideo)}
+
+Al introducir el \textit{contexto barrial} como variable de análisis de los ingresos al Área en el período 2010-2015, se toma como referencia el siguiente mapa \cite{INE2011} (ver figura \ref{fig:mapaINE}), que muestra una caracterización de los barrios de Montevideo según el porcentaje de población con al menos una Necesidad Básica Insatisfecha (NBI). En éste, en términos generales, se observa que los barrios ubicados en la periferia montevideana presentan altos valores de población con carencias críticas, mientras que los barrios de la costa este del departamento presentan valores muy bajos, evidenciando una distribución territorial polarizada. \\
+
+\begin{figure}[H]
+\caption{Montevideo: Porcentaje de población con al menos una NBI por barrio. Año 2011}
+\centering{\fbox{\includegraphics[width=0.7\textwidth]{Imagenes/barrios.png}}}
+\label{fig:mapaINE}
+\end{figure}
+
+%Por su parte, el Formulario Estadístico de Ingreso cuenta con información acerca del barrio de residencia del estudiante. 
+%Por lo tanto y, teniendo en consideración que no se cuenta con información de ingresos económicos de las familias de los estudiantes, se entiende que a partir del mapa de la figura \ref{fig:mapaINE}, se puede obtener una primera aproximación del contexto barrial de los estudiantes que ingresan al Área.
+%
+%Se deja constancia de que se conoce la existencia de una gran heterogeneidad de situaciones de contexto al interior de cada uno de los barrios. De todas formas, se entiende que esta aproximación puede resultar de utilidad, ante la ausencia de variables de carácter socioeconómico.
+%
+A continuación (cuadro \ref{tabla:sencilla2}), se presentan los ingresos al Área Social y Artística por Servicio de acuerdo a la clasificación presentada en el mapa. Si bien la delimitación de barrios no coincide exactamente, es entiende que resulta una buena aproximación.
+
+%\begin{landscape}
+\begin{small}
+\begin{table}[H]
+\caption{Promedio de ingresos anuales por Servicio según porcentaje de población con al menos una NBI del barrio de residencia -y sus desviaciones estándar-}
+\begin{center}
+     \hspace{-0.4in}
+  \begin{tabular}{r|ccccccc|c}
+    \hline
+    \hline
+&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&Total\\
+\hline
+0 a 14.3&33.41&28.99&33.27&40.21&26.11&34.62&33.70&32.02\\
+&(1.30)&(1.23)&(1.42)&(2.40)&(1.89)&(4.57)&(1.57)&(0.66)\\
+14.3 a 21.1&18.18&16.15&19.36&18.80&18.60&19.47&18.13&17.95\\
+&(1.31)&(1.08)&(0.83)&(3.39)&(1.34)&(7.66)&(2.54)&(0.35)\\
+21.1 a 29.0&30.22&34.72&33.34&27.54&37.56&32.13&30.26&32.20\\
+&(0.52)&(2.22)&(1.56)&(2.16)&(3.52)&(8.74)&(2.28)&(0.78)\\
+29.0 a 40.4&12.92&13.97&10.98&10.79&12.62&12.05&13.55&12.88\\
+&(0.86)&(0.92)&(1.84)&(1.16)&(1.63)&(4.15)&(1.61)&(0.55)\\
+40.4 a 60.1&5.26&6.17&3.06&2.65&5.11&1.73&4.35&4.95\\
+&(0.67)&(0.91)&(0.79)&(0.50)&(1.38)&(1.61)&(0.85)&(0.52)\\
+\hline
+\hline
+\end{tabular}
+\label{tabla:sencilla2}
+\end{center}
+\end{table}
+\end{small}
+%\end{landscape}
+
+A partir de los datos presentados (cuadro \ref{tabla:sencilla2}) se destaca, por un lado, la presencia de dos modas, en la primera y tercera categoría según la clasificación utilizada. Por otra parte, resulta claro que los barrios peor posicionados (40.4 - 60.1\% de la población con al menos una NBI) son los que tienen menor presencia en el Área.
+Estos resultados dan un indicio del perfil particular del estudiantado del Área, pero no resultan concluyentes.
+
+\begin{small}
+\begin{table}[H]
+\caption{Distribución de los jóvenes en barrios según categorías de porcentaje población con al menos una NBI}
+\begin{center}
+\begin{tabular}{r|cc|cc}
+  \hline
+  \hline
+\% Pob.NBI &Jóvenes&\%&Jóv.Bach.Comp.&\%\\ 
+\hline
+   0 a 14.3 &47718&18.67&38488&80.66\\
+14.3 a 21.1 &35889&14.04&25558&71.21\\
+21.1 a 29.0 &61350&24.01&40437&65.91\\
+29.0 a 40.4 &48181&18.85&18994&39.42\\
+40.4 a 60.1 &62409&24.42&16339&26.18\\
+\hline
+*Observaciones &255547&100.00&139816&54.71\\
+\hline
+\hline
+
+\end{tabular}
+\label{tabla:sencilla3}
+\end{center}
+\end{table}
+\end{small}
+
+Los resultados precedentes (cuadro \ref{tabla:sencilla3}), elaborados a partir de información del Censo de Población, Hogares y Viviendas 2011, tienen en cuenta la distribución de la población objetivo de la UdelaR, es decir, aquellos individuos en edad de asistir a la universidad y que cuentan con al menos bachillerato completo. 
+
+Siguiendo el criterio de demarcación de los jóvenes utilizado por el Instituto Nacional de la Juventud (INJU), se considera joven a la población comprendida entre los 14 y 29 años de edad. 
+A los efectos del presente análisis se consideran aquellos de 17 años o más (condición mínima de ingreso a la UdelaR). 
+Si bien buena parte del estudiantado de grado de la UdelaR es mayor de 29 años, se entiende que el rango [17 - 29] permite ofrecer un buen análisis aproximado. 
+
+En función de estas consideraciones, la información resumida en el cuadro \ref{tabla:sencilla3} muestra, en primer lugar, que la población joven se encuentra más concentrada en los barrios peor posicionados en la clasificación realizada a partir de NBI.
+Se aprecia además, que la problemática proviene de la educación media, ya que la proporción de jóvenes que termina bachillerato aumenta a medida que se reduce la población con al menos una NBI y, en consecuencia, es esperable que dichos individuos no estén asistiendo a la UdelaR.
+
+\subsection{Ingresos al Área según Tipo de Hogar}
+
+En esta sección se presentan los ingresos a los distintos Servicios del Área en 2011\footnote{Para el año 2010 se cuenta con muy pocas observaciones.} y 2015 respectivamente, clasificando a los estudiantes según el tipo de hogar en que residen. Para ello, se utiliza la clasificación/tipología tomada de \textit{VII Censo de Estudiantes Universitarios de Grado Principales características de los estudiantes de grado de la Universidad de la República en 2012}\cite{DGPlan13}.
+\newpage
+A continuación se exponen dichas tipologías y sus características:\\
+%\begin{enumerate}
+%\item Unipersonal: Jefe
+%
+%\item Nuclear de padres (sin pareja y sin hijos):
+%\begin{itemize}
+%\item Con ambos padres biológicos
+%\item Con madre o padre biológico y cónyuge de madre o padre
+%\end{itemize}
+%
+%\item Monoparental de padres (sin pareja y sin hijos): Con madre o padre
+%\item Nuclear (sin hijos): Con pareja y sin hijos
+%\item Nuclear (con hijos): Con pareja y con hijos
+%\item Monoparental: Con hijos y sin pareja
+%\item No nuclear extendido: Con familiares (Sin otros no familiares, sin hijos, sin pareja y sin padres)
+%\item No nuclear compuesto: Con otros no familiares (sin hijos, sin pareja y sin padres).
+%\end{enumerate}
+
+\begin{table}[H]
+\hspace*{0.8in}
+\caption{Tipología Hogares}
+\hspace*{0.8in}
+\begin{tabular}{l|l}
+  \hline
+  \hline
+Tipo de Hogar & Componentes \\ 
+  \hline
+Unipersonal  &  Jefe \\
+\hline
+Nuclear de padres   &  Con ambos padres biológicos\\
+& Con padre o madre biológico \\
+& y cónyuge de padre o madre \\
+&(sin pareja y sin hijos).\\
+\hline
+Monoparental de padres  & Con madre o con padre \\
+&(sin pareja y sin hijos.)\\
+\hline
+Nuclear sin hijos  &  Con pareja y sin hijos. \\
+\hline
+Nuclear con hijos  & Con pareja y con hijos.    \\
+\hline
+Monoparental &  Con hijos (sin pareja)  \\
+\hline
+No nuclear extendido & Con familiares \\
+&(sin otros no familiares, sin hijos,\\
+&sin pareja y sin padres).  \\
+\hline
+No nuclear compuesto  & Con otros no familiares \\
+&(sin hijos, sin pareja y sin padres). \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{landscape}
+\begin{table}[h]
+
+\caption{\% de Ingresos del año 2011 por Servicio según tipo de hogar}
+
+\begin{tabular}{r|rrrrrrrrrr|r}
+\hline
+\hline
+Tipo hogar&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Interior&Total\\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%\\
+\hline
+Unipersonal & 4.54&5.84&13.31&8.82&6.27&5.56&7.69&5.95&6.94&10.64&6.96\\
+Nuclear de padres&  50.74&46.68&25.62&38.05&34.26&27.78&25.64&46.09&37.96&45.74&41.48\\
+Monoparental de padres&19.22&20.45&14.1&17.87&21.71&17.78&17.95&22.62&18.44&13.3&18.97\\
+Nuclear sin hijos&4.95&5.71&13.7&8.12&8.93&24.44&17.95&6.97&13.45&9.04&8.72\\
+Nuclear con hijos&2.19&4.67&14.9&4.64&6.27&8.89&5.13&2.55&5.42&11.17&5.67\\
+Monoparental&0.66&1.97&5.56&1.86&2.65&4.44&0&0.68&2.31&4.79&2.21\\
+No nuclear extendido&6.53&7.13&4.47&7.66&7.36&3.33&10.26&5.95&6.36&3.19&6.37\\
+No nuclear compuesto&11.17&7.56&8.34&12.99&12.55&7.78&15.38&9.18&9.11&2.13&9.61\\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100\\
+\hline
+*Observaciones&1961&1628&1007&431&829&90&39&588&1383&188&8144\\ 
+\hline
+\hline
+\end{tabular}
+\label{tabla:sencilla4a}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\caption{\% de Ingresos del año 2015 por Servicio según tipo de hogar}
+\begin{tabular}{r|rrrrrrrrrrr|r}
+  \hline
+  \hline
+Tipo hogar&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&RN&CURE&CUT&CUP&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+Unipersonal&6.4&7.6&12.4&11.4&8.5&7.7&7.0&10.2&10.7&11.3&13.5&8.1 \\
+Nuclear de padres&44.3&39.0&28.5&34.4&33.0&30.8&42.5&39.0&36.4&36.9&21.6&39.0 \\
+Monoparental de padres&18.3&18.4&17.6&19.8&18.3&25.0&21.7&16.5&15.7&15.6&16.2&18.5 \\
+Nuclear sin hijos&8.9&8.7&14.7&9.4&9.3&11.5&8.0&6.8&15.4&5.0&21.6&9.5 \\
+Nuclear con hijos&3.7&6.3&6.8&3.6&5.7&3.8&3.6&6.8&11.8&14.9&8.1&5.3 \\
+Monoparental&1.6&2.4&4.2&2.3&3.9&0.0&1.3&2.5&3.2&6.4&5.4&2.4 \\
+No nuclear extendido&6.6&7.2&5.4&5.6&6.0&5.8&5.8&7.6&2.1&2.8&10.8&6.3 \\
+No nuclear compuesto&10.1&10.5&10.4&13.5&15.4&15.4&10.2&10.6&4.6&7.1&2.7&10.9 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100&100\\
+\hline
+*Observaciones&3088&2286&814&555&1089&52&815&236&280&141&37&9393\\
+\hline
+\hline
+\end{tabular}
+\label{tabla:sencilla4}
+\end{center}
+\end{table}
+\end{landscape}
+
+A partir de los datos presentados en los cuadros \ref{tabla:sencilla4a} y \ref{tabla:sencilla4}, se tiene que tanto en 2011 como en 2015 se observa una predominancia de los hogares del tipo Nuclear de padres y Monoparental de padres, lo cual puede responder a las edades de los estudiantes que ingresan al Área. 
+Bajo esta misma hipótesis, se destaca que en el caso de los Servicios en los que se da un alto peso relativo los hogares del tipo Nuclear sin hijos, también se observan mayores promedios de edad del estudiantado que ingresa.\\
+
+\subsection{Ingresos al Área según Máximo Nivel Educativo de Padres}
+
+A partir del análisis de las variables que recogen el \textit{máximo nivel educativo} de padres y madres de los estudiantes que ingresaron al Área en el período, se clasifican a los estudiantes según cual sea el mayor valor de estas dos variables.
+%Cuando se cuente con la información para el período 2002-2015, por ejemplo, se podrán utilizar estos resultados para realizar un análisis de movilidad intergeneracional educativa. 
+A continuación, en el cuadro \ref{tabla:sencilla5}, se pueden ver las características de esta dimensión a nivel del Área para cada año del período 2010-2015.
+
+\begin{table}[H]
+\caption{\% de Ingresos por año según máximo nivel educativo del padre o madre con mayor nivel educativo}
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{r|rrrrrr}
+		\hline
+Nivel & 2010 & 2011 & 2012 & 2013 & 2014 & 2015\\
+\hline
+S/ins.-Primaria Incompleta & 0.47 & 0.60 & 0.64 & 1.40 & 1.76 & 1.55 \\ 
+Primaria Completa & 9.05 & 8.43 & 8.13 & 7.54 & 8.70 & 7.96\\
+Ed. Media Incompleta & 19.80 & 19.27 & 21.53 & 21.02 & 24.77 & 25.35\\
+Ed. Media Completa & 14.06 & 19.70 & 11.84 & 12.98 & 15.67 & 15.03\\
+Terciaria No-Univ. Incompleta & 5.64 & 7.35 & 5.62 & 6.50 & 3.23 & 3.17\\
+Terciaria No-Univ. Completa & 17.22 & 10.78 & 16.84 & 15.23 & 10.45 & 11.06\\
+Univ. Incompleta & 9.49 & 9.09 & 10.11 & 9.62 & 9.21 & 9.23\\
+Univ. Completa & 18.67 & 19.86 & 20.30 & 21.11 & 21.33 & 21.98\\
+NS/NC & 4.60 & 4.92 & 4.99 & 4.6 & 4.88 & 4.67\\
+\hline
+Total & 100 & 100 & 100 & 100 & 100 & 100\\
+\hline
+*Observaciones & 7696 & 7751 & 7389 & 8061 & 8157 & 9393\\
+\hline
+\hline
+		\end{tabular}
+		\end{adjustbox}
+\label{tabla:sencilla5}
+\end{center}
+\end{table}
+
+Si bien no se detectan cambios sustanciales en la distribución de los ingresos al Área por \textit{máximo nivel educativo} del padre o madre (con mayor nivel educativo), se destaca un aumento en la proporción de estudiantes que ingresan al Área cuyo padre o madre con mayor nivel educativo era del nivel Sin Instrucción o Primaria Incompleta, a partir del año 2013. 
+Un aumento similar es observa en la proporción de estudiantes cuyo padre o madre con mayor nivel educativo era del nivel Educación Media Incompleta (este incremento se potencia a partir de 2014).\footnote{El número de *Observaciones se refiere al número de estudiantes para los cuales se pudo calcular el indicador en cada año y Servicio. Sin embargo, los porcentajes allí calculados fueron calculados sobre el total de estudiantes que ingresaron, incluyendo a aquellos que no declararon o desconocían el nivel educativo y/o categoría ocupacional de sus padres.}
+
+\subsection{Ingresos al Área según Categoría Ocupacional de Padres}
+
+Otra variable que resulta de interés, al realizar un análisis de los estudiantes que ingresan al Área en el período 2010-2015 es aquella que refiere a la \textit{situación laboral de los padres}.
+%Si bien no se puede, con la información disponible, refinar sobre otras características del hogar de los estudiantes relevantes a la hora de concluír respecto a la relevancia de la categoría ocupacional de los padres, es interesante conocer las características de los ingresos estudiantiles a carreras de grado del área en esta dimensión. 
+A continuación, los cuadros \ref{tabla:sencilla6} a \ref{tabla:sencilla9}, presentan los ingresos estudiantiles por Servicio según Categoría Ocupacional del padre y de la madre respectivamente. Además de las diferencias entre Servicios, se cuantifican las diferencias entre los extremos del período considerado: 2010 y 2015. 
+
+\begin{landscape}
+\begin{table}[H]
+\vspace*{-0.6in}
+\hspace*{0.4in}
+\caption{\% de Ingresos estudiantiles por Servicio según Categoría Ocupacional del Padre, año 2010.}
+\begin{tabular}{r|rrrrrrrrrr|r}
+  \hline
+  \hline
+  Cat. Ocup. Padre & FCEA & FDER & FHUCE & ENBA & FCS & EUBCA & EUMUS & LICCOM & EDA & Interior & Total\\
+%  &\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+\hline
+Dirección/rentas&7.9&4.3&6.0&6.5&6.1&1.9&14.6&7.3&5.5&0.0&6.0 \\
+\hline
+Asal. Privado&43.6&37.4&34.2&31.9&37.5&33.3&31.3&42.1&41.6&100.0&39.1 \\
+\hline
+Asal. Público&19.5&24.0&21.0&21.9&19.5&30.5&27.1&19.5&19.7&0.0&21.2 \\
+\hline
+Trab. Indep.&16.6&14.4&16.5&20.0&18.4&14.3&18.8&14.9&14.2&0.0&15.8 \\
+\hline
+Trab. No rem./No trabaja&5.3&10.7&13.2&12.5&9.3&13.3&6.3&6.8&10.6&0.0&9.4 \\
+\hline
+No Corresponde / S.D.&7.1&9.2&9.2&7.2&9.2&6.7&2.1&9.3&8.4&0.0&8.4 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100 \\
+\hline
+Observaciones&1756&2310&653&489&885&105&48&599&1296&6&8147 \\
+  \hline
+  \hline
+\end{tabular}
+\label{tabla:sencilla6}
+\end{table}
+
+\begin{table}[H]
+\caption{\% de Ingresos estudiantiles por Servicio según Categoría Ocupacional del Padre, año 2015 }
+\begin{tabular}{r|rrrrrrrrrrr|r}
+  \hline
+  \hline
+Cat. Ocup. Padre&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&RN&CURE&CUT&CUP&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+\hline
+Direccion/rentas&21.2&17.9&17.6&19.3&15.4&23.1&17.3&15.9&16.1&10.1&13.9&18.5 \\
+\hline
+Asal. Privado&43.6&42.8&41.8&38.5&42.1&44.2&43.5&39.7&38.0&39.9&22.2&42.4 \\
+\hline
+Asal. Público&19.2&23.5&23.9&23.8&25.2&9.6&21.7&26.7&24.5&21.7&47.2&22.3 \\
+\hline
+Trab. Indep.&13.6&13.2&14.3&16.9&14.0&23.1&14.4&13.8&17.2&19.6&8.3&14.1 \\
+\hline
+No Corresponde / S.D.&2.4&2.6&2.5&1.5&3.2&0.0&3.1&3.9&4.4&8.7&8.3&2.8 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100&100 \\
+\hline
+Observaciones&3056&2266&807&550&1082&52&811&232&274&138&36&9304\\
+\hline
+\hline
+\end{tabular}
+\label{tabla:sencilla7}
+\end{table}
+
+\begin{table}[H]
+\caption{\% de Ingresos estudiantiles por Servicio según Categoría Ocupacional de la Madre, año 2010.}
+\hspace*{0.4in}
+\begin{tabular}{r|rrrrrrrrrr|r}
+  \hline
+  \hline
+Cat. Ocup. Madre&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Interior&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+Direccion/rentas&4.0&3.0&2.6&4.1&3.3&0.0&6.3&2.7&2.8&0.0&3.2 \\
+\hline
+Asal. Privado&36.7&33.1&30.6&30.5&32.0&28.6&41.7&35.3&34.2&42.9&33.7 \\
+\hline
+Asal. Público&23.3&22.3&25.2&27.6&26.3&27.6&22.9&26.2&22.7&14.3&23.9 \\
+\hline
+Trab. Indep.&10.7&11.0&9.0&12.3&11.1&6.7&10.4&8.2&9.8&42.9&10.4 \\
+\hline
+Trab. No rem./No trabaja&22.8&27.2&29.2&23.1&24.6&34.3&16.7&24.8&28.2&0.0&25.9 \\
+\hline
+No corresponde / S.D.&2.4&3.3&3.4&2.5&2.7&2.9&2.1&2.8&2.4&0.0&2.8 \\
+\hline   
+Total&100&100&100&100&100&100&100&100&100&100&100 \\
+\hline   
+*Observaciones&1756&2312&654&489&885&105&48&600&1296&7&8152 \\
+  \hline
+  \hline
+\end{tabular}
+\label{tabla:sencilla8}
+\end{table}
+
+\begin{table}[H]
+\caption{\% de Ingresos estudiantiles por Servicio según Categoría Ocupacional de la Madre, año 2015.}
+\begin{tabular}{r|rrrrrrrrrrrr|r}
+  \hline
+  \hline
+Cat. Ocup. Madre&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&RN&CURE&CUT&CUP&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+%\hline
+Direccion/rentas&8.7&8.4&7.4&7.8&7.3&0.0&7.2&6.1&9.0&8.7&8.1&8.1 \\
+\hline
+Asal. Privado&45.3&44.3&38.9&43.8&42.6&52.9&42.3&32.9&43.3&36.2&27.0&43.3 \\
+\hline
+Asal. Público&22.9&22.7&29.6&26.9&25.5&23.5&28.6&24.2&20.9&18.1&21.6&24.4 \\
+\hline
+Trab. Indep.&11.9&11.8&12.4&12.9&12.0&21.6&13.0&11.3&14.8&17.4&13.5&12.3 \\
+\hline
+No Corresponde / S.D.&11.3&12.7&11.6&8.5&12.6&2.0&8.9&25.5&11.9&19.6&29.7&12.0 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100&100 \\
+\hline
+Observaciones&3061&2265&807&550&1081&51&808&231&277&138&37&9306 \\
+\hline
+\hline
+\end{tabular}
+\label{tabla:sencilla9}
+\end{table}
+\end{landscape}
+
+\newpage
+A partir de los datos presentados, se destaca que la categoría que resalta tanto para madres como para padres, y para ambos años,  es la categoría ocupacional ``Asalariado privado", en todos los Servicios.
+
+Llama la atención el incremento que se da entre el año 2010 y el 2015, en la ocupación de los padres, en lo que refiere a la categoría ``Dirección/rentas".
+
+\section{Ingresos al Área según Situación Laboral y Procedencia Estudiantil}
+\subsection{Ingresos al Área según Situación Laboral}
+
+En cuanto a la \textit{situación laboral} de los estudiantes, se tiene que un 43.2\%\ de los estudiantes que ingresaron al Área Social y Artística en 2011 y un 43.3\%\ en 2015 se encuentran trabajando al momento de completar el formulario. 
+La distribución de \textit{franjas horarias de trabajo} por semana varía entre Servicios, tal como se observa en los siguientes gráficos (ver figuras \ref{figura:fig5} y \ref{figura:fig6}). \\
+Cabe destacar que de los estudiantes que no trabajan, un 40.0\%\ en 2011 y un 46.3\%\ en 2015 declaran estar buscando trabajo.            
+\begin{figure}[H]
+\caption{Horas de trabajo semanales de los ingresos del año 2011 por Servicio}
+\centering{\fbox{\includegraphics[width=0.7\textwidth]{Imagenes/figura5.png}}}
+\label{figura:fig5}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Horas de trabajo semanales de los ingresos del año 2015 por Servicio}
+\centering{\fbox{\includegraphics[width=0.7\textwidth]{Imagenes/figura6.png}}}
+\label{figura:fig6}
+\end{figure}
+
+En cuanto a la \textit{relación del trabajo con la Carrera} que cursa el estudiante, los resultados para los años 2011 y 2015, se presentan en los cuadros \ref{tab:relT11} y \ref{tab:relT15}.
+
+\begin{landscape}
+\begin{table}[H]
+\caption{\% de Ingresos del año 2011 por Servicio según la relación del trabajo con la Carrera}
+\begin{center}
+\hspace*{-0.85in}
+\begin{tabular}{r|rrrrrrrrrr|r}
+  \hline
+  \hline
+Relación de la ocupación con la Carrera&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Interior&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+No está relacionada&37.7&67.7&35.6&45.8&57.2&61.5&31.3&55.3&31.9&36.5&44.8 \\
+Está poco relacionada&22.7&13.7&9.1&17.4&16.6&16.9&18.8&17.4&16.6&4.8&15.4 \\
+Está relacionada&20.3&11.3&22.7&19.4&16.0&13.8&12.5&14.6&27.1&11.1&19.7 \\
+Está bastante relacionada&7.2&2.2&7.1&4.0&3.3&3.1&12.5&7.1&10.5&14.3&6.7 \\
+Está muy relacionada&12.1&5.2&25.5&13.4&6.9&4.6&25.0&5.5&13.9&33.3&13.4 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100\\
+ \hline
+*Observaciones&472&541&679&201&362&65&16&253&827&63&3479 \\
+  \hline
+   \hline
+\end{tabular}
+\label{tab:relT11}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{\% de Ingresos del año 2015 por Servicio según la relación del trabajo con la Carrera}
+\begin{center}
+\hspace*{-0.85in}
+\begin{tabular}{r|rrrrrrrrrrr|r}
+  \hline
+Relación de la ocupación con la Carrera&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&RN&CURE&CUT&CUP&Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+No está relacionada&39.3&56.4&45.3&54.2&57.3&35.7&62.6&48.6&42.0&33.3&52.9&49.5 \\
+Está poco relacionada&19.9&16.7&11.8&11.6&15.4&3.6&16.8&18.9&19.1&12.5&17.6&16.6 \\
+Está relacionada&23.0&14.8&19.9&17.3&16.8&21.4&12.6&16.2&19.8&33.3&17.6&18.5 \\
+Está bastante relacionada&6.9&4.8&6.6&3.6&2.8&14.3&2.7&5.4&4.6&16.7&0.0&5.3 \\
+Está muy relacionada&10.9&7.3&16.5&13.3&7.7&25.0&5.2&10.8&14.5&4.2&11.8&10.0 \\
+\hline
+Total&100&100&100&100&100&100&100&100&100&100&100&100\\
+\hline
+*Observaciones&1234&1004&468&249&494&28&364&37&131&48&17&4074 \\
+  \hline
+  \hline
+\end{tabular}
+\label{tab:relT15}
+\end{center}
+\end{table}
+\end{landscape}
+
+Teniendo en consideración que estas respuestas refieren al momento en el que el estudiante ingresa a la Carrera, resulta lógico que la categoría que indica que no existe relación entre el trabajo y la Carrera, sea la que moda de esta variable, para ambos años.
+
+De todas formas, cabe resaltar que la categoría ``Está relacionada" no resulta para nada despreciable.
+
+\subsection{Ingresos al Área según Procedencia Estudiantil}
+
+\subsubsection{Ingresos al Área según procedencia de Ed. Secundaria}
+
+A continuación se presenta un análisis del estudiantado de ingreso en el período considerado, según el tipo de institución en el que obtuvo su formación pre-universitaria.
+Cab destacar que no se no se cuenta con más información sobre la trayectoria de educación secundaria de los estudiantes que ingresaron \footnote{Por ejemplo, no se tiene el dato de si los estudiantes que ingresan a una Carrera habiendo cursado tanto 6° de Secundaria como algún año de UTU, lo hacen a través de la formación que obtuvo en uno o el otro. Además, de no contar para todos los años con información sobre formación en UTU de los estudiantes}.
+
+A continuación, en los cuadros \ref{tab:6to2010} y \ref{tab:6to2015}, se presentan, para los años 2010 y 2015, las distribuciones, para cada Servicio, de los ingresos según esta dimensión \footnote{En los cuadros no se presentan los datos respecto a estudiantes que cursaron 6° año en el marco del Plan Microexperiencia ni aquellos que declaran no haber cursado 6° año de Secundaria. El criterio que lleva a no considerar estos datos es la imposibilidad de hacer comparaciones entre ambos años por diferencias en cómo se recopilaron los datos. En ambos cuadros el número de *Observaciones refiere al total de estudiantes para el cuál se contó con el dato necesario para la clasificación, incluyendo las categorías omitidas en el análisis.}.
+
+\subsubsection{Ingresos al Área según procedencia de Ed. Universitaria}
+
+Resulta relevante, también, conocer si existen tendencias en las procedencias de los estudiantes que ingresan a Carreras del Área en lo referido a si provienen de otras instituciones universitarias o si provienen de algún tipo de institución en particular. 
+La figura \ref{figura:f7} representa gráficamente cómo se distribuyen por Servicio los ingresos en los años 2010 y 2015 según si provienen de otra institución universitaria (y de cuál) o no. Se define la procedencia como el haber cursado con anterioridad a la inscripción, o estar cursando en el momento de la inscripción, alguna otra Carrera universitaria.
+Visto que aquellos estudiantes que declaran haber cursado o estar cursando otra Carrera de la UdelaR a la hora de completar el Formulario Estadístico de Ingreso son el grupo mayoritario del total de estudiantes que declaran haber cursado o estar cursando otra Carrera universitaria, la figura \ref{figura:f8} explicita cómo se compone ese grupo de estudiantes, en función de haber obtenido el título en la otra Carrera de la UdelaR.  
+
+\afterpage{\clearpage
+  \begin{landscape}
+\begin{table}[H]
+\caption{\% de Ingresos por Servicio según procedencia de 6° año de educación secundaria, año 2010}
+%\hspace*{1.2in}
+\begin{tabular}{r|rrrrrrrrrr|r}                                                                   
+\hline
+\hline
+6° Sec. ($\%$)   &    FCEA  &  FDER  &  FHUCE &  ENBA  &  FCS  &   EUBCA &  EUMUS & LICCOM & EDA & CURE & Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+Mdeo. - Pública&24.4&31.7&43.6&41.1&34.6&47.1&41.7&34.9&38.1&0.0&33.5 \\
+Mdeo. - Privada&25.8&17.3&16.6&20.5&12.1&5.8&18.8&22.1&15.6&0.0&18.7 \\
+Int. - Pública&39.5&43.5&34.1&32.7&48.1&42.3&27.1&35.9&39.6&50.0&40.4 \\
+Int. - Privada&3.8&4.7&2.2&2.5&2.9&1.0&8.3&3.7&2.2&50.0&3.5 \\
+Ext. - Pública&0.6&0.9&1.3&1.3&0.7&1.9&0.0&1.9&0.6&0.0&0.9 \\
+Ext. - Privada&0.2&0.5&1.1&0.4&0.3&1.0&4.2&0.5&0.3&0.0&0.5 \\
+\hline
+*Observaciones&1740&2271&637&474&865&104&48&593&1292&2&8026 \\
+\hline
+\hline
+\end{tabular}
+\label{tab:6to2010}
+\end{table}
+
+\begin{table}[H]
+\caption{\% de Ingresos por Servicio según procedencia de 6° año de educación secundaria, año 2015}
+\hspace*{-0.1in}
+\begin{tabular}{r|rrrrrrrrrrrrr|r}
+\hline                                                                   
+\hline 
+6° Sec. ($\%$) & FCEA  &  FDER &   FHUCE &  ENBA  &  FCS  & EUMUS  & FIC & RN & CURE & CUT & CUP &   Total \\
+%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\% \\
+\hline
+Mdeo. - Pública&31.9&32.6&40.5&39.1&33.7&40.4&37.1&1.3&10.4&3.5&5.4&32.0 \\
+Mdeo. - Privada&22.3&18.4&21.4&24.1&15.2&26.9&23.9&0.0&3.6&0.0&0.0&19.2 \\
+Int. - Pública&41.1&44.1&33.2&30.3&46.6&26.9&32.1&95.8&76.8&92.2&94.6&43.7 \\
+Int. - Privada&3.9&4.0&2.3&4.9&3.0&1.9&5.2&3.0&8.6&4.3&0.0&3.9 \\
+Ext. - Pública&0.6&0.6&1.2&0.4&0.6&0.0&0.9&0.0&0.0&0.0&0.0&0.6 \\
+Ext. - Privada&0.2&0.3&1.4&1.3&0.8&3.8&0.9&0.0&0.7&0.0&0.0&0.6 \\
+\hline
+*Observaciones&3088&2286&814&555&1089&52&815&236&280&141&37&9393 \\
+\hline
+\hline 
+\end{tabular}
+\label{tab:6to2015}
+\end{table}
+\end{landscape}
+}
+
+
+\afterpage{\clearpage
+\begin{landscape}
+\begin{center}
+\begin{figure}[H]
+\caption{\% de Ingresos a Servicios del Área según procedencia de Ed. Universitaria, años 2010 y 2015}
+\hspace*{-0.3in}
+\centering{\fbox{\includegraphics[width=1.7\textwidth]{Imagenes/figura7.png}}}
+\label{figura:f7}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\caption{\% de Ingresos a Servicios del Área provenientes de otra Carrera de la UdelaR según condición de haber obtenido el título en la otra Carrera, años 2010 y 2015 (del total de ingresos provenientes de otra Carrera de la UdelaR)}
+\hspace*{-0.3in}
+\centering{\fbox{\includegraphics[width=1.7\textwidth]{Imagenes/figura8.png}}}
+\label{figura:f8}
+\end{figure}
+\end{center}
+\end{landscape}
+}
+
+\subsection{Ingresos al Área según condición de solicitud de becas}
+
+Si bien los formularios recopilan información sobre solicitud de becas por parte de los estudiantes que los completan, éstos presentan 2 debilidades a la hora de analizar los ingresos en esta dimensión. Por un lado, la tasa de respuesta a estas preguntas es muy baja para formularios anteriores al año 2012, lo que hace difícil la comparación de resultados. Por otro, dado que el formulario se completa temprano en el año, muchos de los estudiantes aún no han solicitado becas, y la gran mayoría de los que ya la solicitaron para ese momento, aún no saben el estado de su solicitud, por lo que sólo se tiene información respecto a las solicitudes en un sentido amplio. El cuadro \ref{tab:beca} presenta la proporción promedio de estudiantes que ingresan anualmente a los Servicios del Área y declara haber solicitado algún tipo de beca de estudio para el período 2012-2015. La EDA fue contabilizada dentro de FCEA en el análisis, al no contar con información propia para ella durante los 3 años. \\
+\begin{table}[H]
+\caption{Proporción promedio de Ingresos anuales a Servicios del Área (y sus desvíos estándar) que solicitaron beca de alguna institución, años 2012-2015}
+\begin{tabular}{rrrrrrrrrrrrr}
+\hline
+\hline
+ & FCEA & FDER & FHUCE & ENBA & FCS & EUBCA & FIC & Interior\\
+\hline
+\hline
+Solicitó Beca & 17.0 & 20.1 & 08.8 & 11.6 & 22.5 & 11.1 & 14.3 & 33.2\\
+&(1.0) & (1.0) & (0.6) & (1.7) & (2.5) & (5.7) & (0.6) & (9.2) \\
+\hline
+\hline
+\end{tabular}
+\label{tab:beca}
+\end{table}
+\newpage
+
+\section{Anexo I: Descripción de Formularios y datos utilizados}
+
+\begin{landscape}
+\begin{table}[H]
+\begin{tabular}{rrrrrrrrrrr}
+\hline
+Carrera 2010 & FCEA  &  FDER  &  FHUCE &  ENBA  &  FCS   &  EUBCA &  EUMUS  & LICCOM  &   EDA  &   Total \\
+\hline
+Contador Publico    &    112.0  & 0.0  &   0.0  &   0.0  &   0.0    & 0.0  &   0.0   &  0.0  &   0.0 &  112.0 \\
+Lic. en Estad.stica  &   131.0  & 0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0   &  0.0   &  0.0 & 131.0 \\
+Lic. en Econom.a   &     16.0  &  0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0  &   0.0   &  0.0 &  16.0 \\
+Lic. en Administraci.n &  61.0  &  0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0  &   0.0  &   0.0 &  61.0 \\
+FCEA-Basico  &   1729.0 & 0.0   &  0.0  &   0.0  &   0.0  &   0.0    & 0.0  &   0.0  &   0.0  &   1729.0 \\
+Rel. Int.   &    0.0  &   483.0 &  0.0  &   0.0  &   0.0 &    0.0    & 0.0  &   0.0 &    0.0 &    483.0 \\
+Rel. Laborales & 0.0   &  853.0 &  0.0  &   0.0  &   0.0   &  0.0    & 0.0  &   0.0  &   0.0  &   853.0 \\
+Traductorado Publico &   0.0  &   42.0 &   0.0  &   0.0  &   0.0    & 0.0  &   0.0  &   0.0   &  0.0 & 42.0 \\
+Abogac.a    &    0.0   &  1084.0 & 0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0  &   0.0  &   1084.0 \\
+Notariado   &    0.0   &  1081.0 & 0.0 &    0.0 &    0.0   &  0.0    & 0.0  &   0.0  &   0.0   &  1081.0 \\
+Antropolog.a &   0.0   &  0.0  &   133.0 &  0.0  &   0.0  &   0.0    & 0.0   &  0.0  &   0.0  &   133.0 \\
+CC de la Educ. & 0.0  &   0.0  &   157.0 &  0.0 &    0.0  &   0.0    & 0.0  &   0.0  &   0.0  &   157.0 \\
+Lic. en Historia   &     0.0  &   0.0  &   107.0 &  0.0  &   0.0    & 0.0  &   0.0  &   0.0 &    0.0 &  107.0 \\
+Lic. en Filosof.a    &   0.0 &    0.0   &  98.0  &  0.0  &   0.0    & 0.0  &   0.0  &   0.0   &  0.0  &  98.0 \\
+Lic. en Letras & 0.0  &   0.0  &   117.0 &  0.0 &    0.0  &   0.0    & 0.0  &   0.0  &   0.0  &   117.0 \\
+Lic. en linguistica  &   0.0  &   0.0 &    61.0  &  0.0  &   0.0    & 0.0  &   0.0  &   0.0   &  0.0 &  61.0 \\
+T.c. Turismo  &  0.0   &  0.0  &   7.0  &   0.0  &   0.0  &   0.0    & 0.0  &   0.0  &   0.0   &  7.0 \\
+Tec.Corr.Estilo & 0.0  &   0.0  &   85.0  &  0.0  &   0.0   &  0.0    & 0.0   &  0.0  &   0.0 &    85.0 \\
+Lic. en Artes  &  0.0  &   0.0  &   0.0  &   521.0 &  0.0   &  0.0    & 0.0   &  0.0   &  0.0  &   521.0 \\
+CI-FCS &  0.0 &    0.0 &    0.0 &    0.0  &   897.0  & 0.0  &   0.0    & 0.0 &    0.0  &   897.0 \\
+Lic. en Bibliotecolog.a & 0.0  &   0.0  &   0.0 &    0.0  &   0.0    & 55.0  &  0.0  &   0.0  &   0.0  &  55.0 \\
+Lic. en Archivolog.a  &  0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 62.0  &  0.0  &   0.0   &  0.0 &  62.0 \\
+Lic. en Comunicaci.n  &  0.0  &   0.0   &  0.0  &   0.0   &  0.0    & 0.0  &   0.0   &  609.0 &  0.0 &  609.0 \\
+TUA   &  3.0   &  0.0  &   0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  1305.0 & 1308.0 \\
+Lic. en M.sica & 0.0  &   0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 54.0  &  0.0  &   0.0  &   54.0 \\
+Lic. en Interpretacion & 0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 0.0  &   56.0  &  0.0   &  0.0 &  56.0\\
+\hline
+Total &  2052.0 & 3543.0 & 765.0 &  521.0 &  897.0 &  117.0 &  110.0 &   609.0 &  1305.0 & 9919.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2010 por Carrera y Servicio}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{rrrrrrrrrrr}
+\hline
+Carrera 2011&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Total \\
+\hline
+Contador Publico&28.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&28.0 \\
+TAC&1.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1.0 \\
+Lic. en Estad.stica&210.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&210.0 \\
+Lic. en Econom.a&7.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&7.0 \\
+Lic. en Administraci.n&52.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&52.0 \\
+FCEA-Basico&1872.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1872.0 \\
+Rel. Int.&0.0&461.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&461.0 \\
+Rel. Laborales&0.0&3.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&3.0 \\
+Traductorado Publico&0.0&39.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&39.0 \\
+Abogac.a&0.0&1231.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1231.0 \\
+Notariado&0.0&1200.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1200.0 \\
+Antropolog.a&0.0&0.0&133.0&0.0&0.0&0.0&0.0&0.0&0.0&133.0 \\
+CC de la Educ.&0.0&0.0&159.0&0.0&0.0&0.0&0.0&0.0&0.0&159.0 \\
+Lic. en Historia&0.0&0.0&100.0&0.0&0.0&0.0&0.0&0.0&0.0&100.0 \\
+Lic. en Filosof.a&0.0&0.0&92.0&0.0&0.0&0.0&0.0&0.0&0.0&92.0 \\
+Lic. en Letras&0.0&0.0&105.0&0.0&0.0&0.0&0.0&0.0&0.0&105.0 \\
+Lic. en linguistica&0.0&0.0&59.0&0.0&0.0&0.0&0.0&0.0&0.0&59.0 \\
+Tec.Corr.Estilo&0.0&0.0&95.0&0.0&0.0&0.0&0.0&0.0&0.0&95.0 \\
+Lic. LyM Audiovis.&0.0&0.0&0.0&2.0&0.0&0.0&0.0&0.0&0.0&2.0 \\
+Lic. en Artes&0.0&0.0&0.0&431.0&0.0&0.0&0.0&0.0&0.0&431.0 \\
+CI-FCS&0.0&0.0&0.0&0.0&844.0&0.0&0.0&0.0&0.0&844.0 \\
+Trabajo Social&0.0&111.0&0.0&0.0&2.0&0.0&0.0&0.0&0.0&113.0 \\
+Tec.Univ.Int.L. de Se.as&0.0&0.0&24.0&0.0&0.0&0.0&0.0&0.0&0.0&24.0 \\
+Lic. en Museolog.a&0.0&0.0&338.0&0.0&0.0&0.0&0.0&0.0&0.0&338.0 \\
+Lic. en Turismo&0.0&0.0&25.0&0.0&0.0&0.0&0.0&0.0&0.0&25.0 \\
+Lic. en Bibliotecolog.a&0.0&0.0&0.0&0.0&0.0&49.0&0.0&0.0&0.0&49.0 \\
+Lic. en Archivolog.a&0.0&0.0&0.0&0.0&0.0&43.0&0.0&0.0&0.0&43.0 \\
+Tec. en Int. Musical&0.0&0.0&0.0&0.0&0.0&0.0&7.0&0.0&0.0&7.0 \\
+Lic. en Comunicaci.n&0.0&0.0&0.0&0.0&0.0&0.0&0.0&588.0&0.0&588.0 \\
+TUA&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1383.0&1383.0 \\
+Lic. en M.sica&0.0&0.0&0.0&0.0&0.0&0.0&49.0&0.0&0.0&49.0 \\
+Lic. en Interpretacion&0.0&0.0&0.0&0.0&0.0&0.0&28.0&0.0&0.0&28.0 \\
+\hline
+Total&2170.0&3045.0&1130.0&433.0&846.0&92.0&84.0&588.0&1383.0&9771.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2011 por Carrera y Servicio}
+\end{table}
+\begin{table}[H]
+\begin{tabular}{rrrrrrrrrrr}
+\hline
+Carrera 2012&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Total \\
+\hline
+Contador Publico&1735.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1735.0 \\
+TAC&137.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&137.0 \\
+Lic. en Estad.stica&67.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&67.0 \\
+Lic. en Econom.a&349.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&349.0 \\
+Lic. en Administraci.n&319.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&319.0 \\
+Rel. Int.&0.0&413.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&413.0 \\
+Rel. Laborales&0.0&709.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&709.0 \\
+Traductorado Publico&0.0&43.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&43.0 \\
+Abogac.a&1.0&1163.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1164.0 \\
+Notariado&0.0&1139.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1139.0 \\
+Antropolog.a&0.0&0.0&109.0&0.0&0.0&0.0&0.0&0.0&0.0&109.0 \\
+CC de la Educ.&0.0&0.0&129.0&0.0&0.0&0.0&0.0&0.0&0.0&129.0 \\
+Lic. en Historia&0.0&0.0&74.0&0.0&0.0&0.0&0.0&0.0&0.0&74.0 \\
+Lic. en Filosof.a&0.0&0.0&93.0&0.0&0.0&0.0&0.0&0.0&0.0&93.0 \\
+Lic. en Letras&0.0&0.0&125.0&0.0&0.0&0.0&0.0&0.0&0.0&125.0 \\
+Lic. en linguistica&0.0&1.0&92.0&0.0&0.0&0.0&0.0&0.0&0.0&93.0 \\
+Tec.Corr.Estilo&0.0&0.0&120.0&0.0&0.0&0.0&0.0&0.0&0.0&120.0 \\
+Tec. en Interpretaci.n&0.0&0.0&0.0&0.0&0.0&0.0&3.0&0.0&0.0&3.0 \\
+Tec. Direcci.n Coros&0.0&0.0&0.0&0.0&0.0&0.0&2.0&0.0&0.0&2.0 \\
+Lic. LyM Audiovis.&0.0&0.0&0.0&50.0&0.0&0.0&0.0&0.0&0.0&50.0 \\
+Lic. en Artes&0.0&0.0&0.0&377.0&0.0&0.0&0.0&0.0&0.0&377.0 \\
+CI-FCS&0.0&0.0&0.0&0.0&699.0&0.0&0.0&0.0&0.0&699.0 \\
+Lic. en Turismo&0.0&0.0&77.0&0.0&0.0&0.0&0.0&0.0&0.0&77.0 \\
+Tec. Imagen Fotog.&0.0&0.0&0.0&6.0&0.0&0.0&0.0&0.0&0.0&6.0 \\
+Lic. en Bibliotecolog.a&0.0&0.0&0.0&0.0&0.0&37.0&0.0&0.0&0.0&37.0 \\
+Lic. en Archivolog.a&0.0&0.0&0.0&0.0&0.0&44.0&0.0&0.0&0.0&44.0 \\
+Lic. en Comunicaci.n&0.0&0.0&0.0&0.0&0.0&0.0&0.0&556.0&0.0&556.0 \\
+TUA&19.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&958.0&977.0 \\
+Lic. Binac. en Turismo&0.0&0.0&127.0&0.0&0.0&0.0&0.0&0.0&0.0&127.0 \\
+Tec. Binac. en Turismo&0.0&0.0&62.0&0.0&0.0&0.0&0.0&0.0&0.0&62.0 \\
+Lic. en M.sica&0.0&0.0&0.0&0.0&0.0&0.0&45.0&0.0&0.0&45.0 \\
+Lic. en Interpretacion&0.0&0.0&0.0&0.0&0.0&0.0&48.0&0.0&0.0&48.0 \\
+\hline
+Total&2627.0&3468.0&1008.0&433.0&699.0&81.0&98.0&556.0&958.0&9928.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2012 por Carrera y Servicio}
+\end{table}
+\begin{table}[H]
+\begin{tabular}{rrrrrrrrrrr}
+\hline
+Carrera 2013&FCEA&FDER&FHUCE&ENBA&FCS&EUBCA&EUMUS&LICCOM&EDA&Total \\
+\hline
+Contador Publico&1911.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1911.0 \\
+TAC&128.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&128.0 \\
+Lic. en Estad.stica&50.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&50.0 \\
+Lic. en Econom.a&327.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&327.0 \\
+Lic. en Administraci.n&296.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&296.0 \\
+Rel. Int.&0.0&523.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&523.0 \\
+Rel. Laborales&0.0&469.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&469.0 \\
+Traductorado Publico&0.0&29.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&29.0 \\
+Abogac.a&0.0&1252.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1252.0 \\
+Notariado&0.0&1253.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1253.0 \\
+Antropolog.a&0.0&0.0&111.0&0.0&0.0&0.0&0.0&0.0&0.0&111.0 \\
+CC de la Educ.&0.0&0.0&114.0&0.0&0.0&0.0&0.0&0.0&0.0&114.0 \\
+Lic. en Historia&0.0&0.0&98.0&0.0&0.0&0.0&0.0&0.0&0.0&98.0 \\
+Lic. en Filosof.a&0.0&0.0&87.0&0.0&0.0&0.0&0.0&0.0&0.0&87.0 \\
+Lic. en Letras&0.0&0.0&97.0&0.0&0.0&0.0&0.0&0.0&0.0&97.0 \\
+Lic. en linguistica&0.0&0.0&65.0&0.0&0.0&0.0&0.0&0.0&0.0&65.0 \\
+Tec.Corr.Estilo&0.0&0.0&149.0&0.0&0.0&0.0&0.0&0.0&0.0&149.0 \\
+Lic. LyM Audiovis.&0.0&0.0&0.0&21.0&0.0&0.0&0.0&0.0&0.0&21.0 \\
+Lic. en Artes&0.0&0.0&0.0&463.0&0.0&0.0&0.0&0.0&0.0&463.0 \\
+Tec. Artes P. y V.&0.0&0.0&0.0&1.0&0.0&0.0&0.0&0.0&0.0&1.0 \\
+Tec. Tecn. Imag. Foto.&0.0&0.0&0.0&1.0&0.0&0.0&0.0&0.0&0.0&1.0 \\
+CI-FCS&0.0&0.0&0.0&0.0&768.0&0.0&0.0&0.0&0.0&768.0 \\
+Tec.Univ.Int.L. de Se.as&0.0&0.0&17.0&0.0&0.0&0.0&0.0&0.0&0.0&17.0 \\
+Lic. en Bibliotecolog.a&0.0&0.0&0.0&0.0&0.0&60.0&0.0&0.0&0.0&60.0 \\
+Lic. en Archivolog.a&0.0&0.0&0.0&0.0&0.0&65.0&0.0&0.0&0.0&65.0 \\
+Tec. en Int. Musical&0.0&0.0&0.0&0.0&0.0&0.0&5.0&0.0&0.0&5.0 \\
+Lic. en Comunicaci.n&0.0&0.0&0.0&0.0&0.0&0.0&0.0&645.0&0.0&645.0 \\
+TUA&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1031.0&1031.0 \\
+Lic. en M.sica&0.0&0.0&0.0&0.0&0.0&0.0&55.0&0.0&0.0&55.0 \\
+Lic. en Interpretacion&0.0&0.0&0.0&0.0&0.0&0.0&62.0&0.0&0.0&62.0 \\
+\hline
+Total&2712.0&3526.0&738.0&486.0&768.0&125.0&122.0&645.0&1031.0&10153.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2013 por Carrera y Servicio}
+\end{table}
+\begin{table}[H]
+\vspace*{-0.4in}
+\hspace*{0.6in}
+\begin{tabular}{rrrrrrrrrr}
+\hline
+Carrera 2014 & FCEA &   FDER  &  FHUCE  & ENBA  &  FCS  &   EUBCA  & EUMUS  & LICCOM   &  Total \\
+\hline
+Contador Publico    &    1663.0 & 0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0 &    0.0   &  1663.0 \\
+TAC  &   225.0 &  0.0  &   0.0  &   0.0   &  0.0  &   0.0   &  0.0    & 0.0  &   225.0 \\
+Lic. en Estad.stica  &   45.0  &  0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  0.0  &   0.0  &   45.0 \\
+Lic. en Econom.a    &    343.0 &  0.0  &   0.0  &   0.0 &    0.0    & 0.0   &  0.0  &   0.0  &   343.0 \\
+Lic. en Administraci.n & 231.0 &  0.0 &    0.0 &    0.0 &    0.0    & 0.0    & 0.0 &    0.0   &  231.0 \\
+Rel. Int.    &   0.0 &   579.0  & 0.0  &   0.0  &   0.0 &   0.0    & 0.0  &   0.0  &   579.0 \\
+Rel. Laborales & 0.0  &   533.0 &  0.0 &    0.0 &    0.0  &   0.0    & 0.0   &  0.0   &  533.0 \\
+Traductorado Publico  &  0.0  &   33.0  &  0.0  &   0.0  &   0.0    & 0.0   &  0.0   &  0.0   &  33.0 \\
+Abogac.a    &   0.0  &   1367.0 & 0.0  &   0.0   &  0.0    & 0.0    & 0.0   &  0.0  &   1367.0 \\
+Notariado   &    0.0  &   1367.0 & 0.0  &   0.0  &   0.0  &   0.0    & 0.0  &   0.0  &   1367.0 \\
+Antropolog.a  &  0.0  &   0.0   &  107.0 &  0.0 &    0.0   &  0.0    & 0.0   &  0.0  &   107.0 \\
+CC de la Educ. & 0.0 &    0.0   &  123.0 &  0.0  &   0.0  &   0.0    & 0.0 &    0.0  &   123.0 \\
+Lic. en Historia    &    0.0  &   0.0  &   130.0  & 0.0  &   0.0    & 0.0 &    0.0  &   0.0  &   130.0 \\
+Lic. en Filosof.a    &   0.0  &   0.0   &  99.0  &  0.0 &    0.0    & 0.0   &  0.0 &   0.0   &  99.0 \\
+Lic. en Letras & 0.0   &  0.0 &    108.0 &  0.0   &  0.0   &  0.0    & 0.0  &   0.0   &  108.0 \\
+Lic. en linguistica  &   0.0  &   0.0   &  58.0  &  0.0  &   0.0    & 0.0   &  0.0 &    0.0     & 58.0 \\
+Tec.Corr.Estilo & 0.0  &   0.0 &    135.0 &  0.0   &  0.0   &  0.0    & 0.0  &   0.0  &   135.0 \\
+Tec. en Interpretaci.n & 0.0  &   0.0  &   0.0  &   0.0 &    0.0    & 0.0   &  3.0   &  0.0  &   3.0 \\
+Tec. Direcci.n Coros  &  0.0 &    0.0  &   0.0  &   0.0  &   0.0    & 0.0   &  3.0  &   0.0  &   3.0 \\
+Tec. Univ. Bienes Culturales &   0.0 &    0.0  &   39.0 &   0.0    & 0.0  &   0.0  &   0.0   &  0.0  &  39.0 \\
+Lic. LyM Audiovis.   &   0.0  &   0.0 &   0.0   &  39.0  &  0.0    & 0.0   &  0.0 &    0.0  &   39.0 \\
+Lic. en Artes  & 0.0  &   0.0  &    0.0  &   443.0  & 0.0  &   0.0    & 0.0  &   0.0  &   443.0 \\
+Tec. Artes P. y V.   &   0.0  &   0.0   &  0.0  &   8.0  &   0.0    & 0.0   &  0.0   &  0.0  &   8.0 \\
+CI-FCS & 0.0  &   0.0  &   0.0  &   0.0  &   853.0  & 0.0  &   0.0    & 0.0  &   853.0 \\
+Tec. en Des. Reg. Sust. & 0.0  &   0.0  &   0.0  &   0.0  &   40.0   & 0.0  &    0.0 &    0.0  &   40.0 \\
+Lic. en Turismo & 0.0   &  0.0  &   81.0  &  0.0 &    0.0   &  0.0    & 0.0  &   0.0 &    81.0 \\
+Tec. Imagen Fotog.   &   0.0  &   0.0  &   0.0   &  25.0 &   0.0    & 0.0  &   0.0 &    0.0  &  25.0 \\
+Lic. en Bibliotecolog.a & 0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 56.0  &  0.0   &  0.0 &    56.0 \\
+Lic. en Archivolog.a  &  0.0  &   0.0    & 0.0  &   0.0 &    0.0    & 30.0   & 0.0 &    0.0  &   30.0 \\
+Lic. en Comunicaci.n &   0.0 &    0.0  &   0.0  &   0.0 &    0.0    & 0.0   &  0.0  &   690.0 &  690.0 \\
+TUA   &  731.0 &  0.0  &   0.0  &   0.0   &  0.0  &   0.0   &  0.0    & 0.0  &   731.0 \\
+Lic. Binac. en Turismo & 0.0  &   0.0  &   17.0  &  0.0  &   0.0    & 0.0   &  0.0  &   0.0  &   17.0 \\
+Lic. en M.sica & 0.0  &   0.0  &   0.0  &   0.0  &   0.0  &   0.0    & 26.0   & 0.0  &   26.0 \\
+Lic. en Interpretacion & 0.0 &    0.0  &   0.0  &   0.0   &  0.0    & 0.0   &  66.0  &  0.0   &  66.0 \\
+\hline
+Total  & 3238.0 & 3879.0  & 897.0 &  515.0 &  893.0 &  86.0  &  98.0 &    690.0  & 10296.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2014 por Carrera y Servicio}
+\end{table}
+
+\begin{table}[H]
+\vspace*{-0.9in}
+\hspace*{0.6in}
+\begin{tabular}{rrrrrrrrrrrrr}
+Carrera 2015&FCEA&FDER&FHUCE&ENBA&FCS&EUMUS&FIC&RN&CURE&CUT&CUP&Total \\
+\hline
+Contador Público&1724.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&1724.0 \\
+TAC&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&186.0&109.0&0.0&295.0 \\
+Lic. en Estadística&5.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&5.0 \\
+Lic. en Economía&283.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&283.0 \\
+Lic. en Administración&245.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&245.0 \\
+FCEA-Básico&13.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&13.0 \\
+Rel. Int.&0.0&579.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&579.0 \\
+Rel. Laborales&0.0&524.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&524.0 \\
+Traductorado Público&0.0&42.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&42.0 \\
+Abogacía/Notariado&0.0&1140.0&0.0&0.0&0.0&0.0&0.0&117.0&0.0&0.0&0.0&1257.0 \\
+Antropología&0.0&0.0&148.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&148.0 \\
+CC de la Educ.&0.0&0.0&129.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&129.0 \\
+Lic. en Historia&0.0&0.0&114.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&114.0 \\
+Lic. en Filosofía&0.0&0.0&115.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&115.0 \\
+Lic. en Letras&0.0&0.0&124.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&124.0 \\
+Lic. en linguística&0.0&0.0&55.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&55.0 \\
+Tec.Corr.Estilo&0.0&0.0&126.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&126.0 \\
+Tec. en Interpretación&0.0&0.0&0.0&0.0&0.0&0.0&0.0&2.0&0.0&0.0&0.0&2.0 \\
+Tec. Univ. Bienes Culturales&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&7.0&14.0&21.0 \\
+Lic. LyM Audiovis.&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&69.0&0.0&0.0&69.0 \\
+Lic. en Artes&0.0&0.0&0.0&555.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&555.0 \\
+Tec. Artes P. y V.&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&20.0&0.0&0.0&20.0 \\
+Sociología&0.0&0.0&0.0&0.0&4.0&0.0&0.0&0.0&0.0&0.0&0.0&4.0 \\
+Ciencia Politica&0.0&0.0&0.0&0.0&2.0&0.0&0.0&0.0&0.0&0.0&0.0&2.0 \\
+CI-FCS&0.0&0.0&0.0&0.0&1076.0&0.0&0.0&86.0&0.0&0.0&0.0&1162.0 \\
+Trabajo Social&0.0&0.0&0.0&0.0&7.0&0.0&0.0&0.0&0.0&0.0&0.0&7.0 \\
+Tec. en Des. Reg. Sust.&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&25.0&0.0&25.0 \\
+Lic. en Museología&0.0&0.0&3.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&3.0 \\
+Lic. en Turismo&0.0&0.0&0.0&0.0&0.0&0.0&0.0&27.0&5.0&0.0&0.0&32.0 \\
+Tec. Imagen Fotog.&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&22.0&22.0 \\
+Lic. en Bibliotecología&0.0&0.0&0.0&0.0&0.0&0.0&2.0&0.0&0.0&0.0&1.0&3.0 \\
+Lic. en Archivología&0.0&0.0&0.0&0.0&0.0&0.0&3.0&0.0&0.0&0.0&0.0&3.0 \\
+Lic. en Comunicación&0.0&0.0&0.0&0.0&0.0&0.0&810.0&0.0&0.0&0.0&0.0&810.0 \\
+TUA&818.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&818.0 \\
+Lic. Binac. en Turismo&0.0&0.0&0.0&0.0&0.0&0.0&0.0&4.0&0.0&0.0&0.0&4.0 \\
+Lic. en Música&0.0&0.0&0.0&0.0&0.0&28.0&0.0&0.0&0.0&0.0&0.0&28.0 \\
+Lic. en Interpretación&0.0&0.0&0.0&0.0&0.0&24.0&0.0&0.0&0.0&0.0&0.0&24.0 \\
+\hline
+Total&3088.0&2285.0&814.0&555.0&1089.0&52.0&815.0&236.0&280.0&141.0&37.0&9392.0 \\
+\hline
+\end{tabular}
+\caption{Ingresos estudiantiles en 2015 por Carrera y Servicio}
+\end{table}
+
+\end{landscape}
+
+\subsection{Descripción de Formularios}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{rr}
+\hline
+variable & descripción\\
+\hline
+cedula &	cédula de identidad\\
+nombre &	nombre del estudiante\\
+email &	correo electronico del estudiante\\
+fono &	teléfono del estudiante\\
+cel &	celular del estudiante\\
+\hline
+fecha$\_$insc & fecha de inscripción\\
+año$\_$ing &	año de ingreso\\
+cod$\_$fac &	facultad\\
+cod$\_$carr &	carrera que cursa\\
+ciclo &	ciclo\\
+carrfac &	facultad$\_$carrera$\_$ciclo\\
+\hline
+sexo &	sexo\\
+fecha$\_$nac &	fecha de nacimiento\\
+direccion &	domicilio del estudiante\\
+barrio &	barrio recodificada\\
+residencia &	lugar de residencia actual\\
+loc$\_$res	& lugar de residencia - localidad\\
+lug$\_$nac &	lugar de nacimiento\\
+loc$\_$nac &	lugar de nacimiento - localidad\\
+res$\_$marzo &	lugar de residencia en marzo del año pasado\\
+\hline
+vive$\_$en &	ud. vive en (casa/apto/etc)\\
+est$\_$cony &	estado conyugal\\
+num$\_$hijos &	número de hijos\\
+viv$\_$solo	 & vive solo\\
+num$\_$per &	numero de personas que viven con ud\\
+pers$\_$y &	numero de personas que perciben ingresos y viven con ud\\
+padres &	Padres\\
+y$\_$padres &	padres perciben ingreso\\
+conyuge &	cónyuge o compañero\\
+y$\_$conyuge &	conyuge percibe ingreso\\
+cony$\_$pad &	cónyuge del padre o madre\\
+y$\_$cony$\_$pad &	conyuge padre o madre percibe ingreso\\
+hijos &	hijos\\
+y$\_$hijos &	hijos perciben ingreso\\
+herman &	hermanos\\
+y$\_$herman &	hermanos perciben ingreso\\
+abuelo &	abuelos\\
+y$\_$abuelo &	abuelos perciben ingreso\\
+suegros &	suegros\\
+y$\_$suegros &	suegros perciben ingreso\\
+otr$\_$fam &	otros familiares\\
+y$\_$otr$\_$fam &	otros fliares perciben ingreso\\
+otr$\_$est &	otros estudiantes\\
+y$\_$otr$\_$est &	otros estudiantes perciben ingreso\\
+otr$\_$per &	otros\\
+y$\_$otr$\_$per &	otras personas perciben ingreso\\
+\hline
+primaria &	educación primaria\\
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{rr}
+primaria$\_$regio &	región en que cursó educación primaria\\
+primaria$\_$secto	& sector en que cursó educación primaria\\
+secund &	primeros 5 años de secundaria\\
+secund$\_$region &	región en que cursó los primeros cinco años de educación secundaria\\
+secund$\_$sector &	sector en que cursó los primeros cinco años de educación secundaria\\
+sexto &	sexto año de secundaria\\
+sexto$\_$region &	región en que cursó sexto\\
+sexto$\_$sector &	sector en que cursó sexto año de educación secundaria\\
+utu &	educación técnica\\
+mili$\_$pol &	sexto de enseñanza militar$\_$policial\\
+egre$\_$sexto &	año en que egresó de sexto año de educación secundaria\\
+mad$\_$edu$\_$papel &	nivel educativo de la madre formulario papel\\
+mad$\_$edu$\_$seciu &	nivel educativo de la madre seciu\\
+pad$\_$edu$\_$papel &	nivel educativo del padre formulario papel\\
+pad$\_$edu$\_$seciu &	nivel educativo del padre seciu\\
+otr$\_$estud &	otros estudios universitarios o terciarios de grado que está/ha realizando/do\\
+ingreso1 &	año de ingreso otros estudios de grado\\
+cod$\_$inst1 &	tipo de institución dónde cursa o cursó otros estudios de grado\\
+cod$\_$reg1 &	región dónde realizó o realiza otros estudios de grado\\
+cod$\_$tit1 &	tipo de título obtenido o aspirado\\
+titulo1 &	¿obtuvo el título en la otra carrera?\\
+egreso1 &	año de egreso otros estudios de grado realizados\\
+posgrado &	tiene estudios de posgrado?\\
+cod$\_$pos1 &	código de tipo de posgrado\\
+ing$\_$pos1 &	año de ingreso a estudios de posgrado que está/ha realizando/do\\
+cod$\_$ins$\_$pos1 &	tipo de institución dónde cursa o cursó estudios de posgrado\\
+cod$\_$reg$\_$pos1 &	región dónde realizó o realiza otros estudios de posgrado\\
+titulo$\_$pos1 &	¿obtuvo el título?\\
+egreso$\_$pos1 &	año de egreso estudios de posgrado realizados\\
+\hline
+ocup$\_$enc &	ocupación del encuestado\\
+ocup$\_$pad &	ocupación del padre\\
+ocup$\_$mad &	ocupación de la madre\\
+hora$\_$tra &	horas promedio de trabajo semanal\\
+inic$\_$tra &	año en que comenzó su actividad laboral\\
+rel$\_$trab &	relación de la ocupación con la carrera\\
+sit$\_$lab &	situación laboral de quienes no trabajan\\
+est$\_$ingr &	percibe ingresos el estudiante\\
+poraport &	porcentaje de aportes\\
+\hline
+becas	 & ¿se inscribió en algún programa de becas para cursar esta carrera?\\
+aplica$\_$fs &	¿solicitó beca del fondo de solidaridad?\\
+aplica$\_$bu &	¿solicitó beca de bienestar universitario?\\
+aplica$\_$otro &	¿solicitó beca de otra institución?\\
+\hline
+\end{tabular}
+\caption{Descripción de variables típicas en las bases de datos utilizadas (Formulario Estadístico).}
+\end{center}
+\end{table}
+
+%\section{Referencias Bibliográficas}
+\begin{thebibliography}{X}
+\bibitem{DGPlan13} Dirección General de Planeamiento, Universidad de la República, Uruguay 2013.
+\textit{VII Censo de Estudiantes Universitarios de Grado Principales características de los estudiantes de grado de la Universidad de la República en 2012}.\\
+
+\bibitem{DGPlan15} Dirección General de Planeamiento, Universidad de la República, Uruguay 2016.
+\textit{Estadísticas Básicas 2015}.\\
+Consultado en: $http://gestion.udelar.edu.uy/planeamiento/publicacion_generica/estadisticas-basicas-2015/$
+
+\bibitem{INE2011} Instituto Nacional de Estadística, Uruguay, 2011.
+\textit{Atlas Sociodemográfico y de la Desigualdad del Uruguay}. Fascículo 1: Las Necesidades Básicas Insatisfechas a partir de los Censos 2011. \\
+Consultado en: $http://ine.gub.uy/atlas-sociodemografico$ 
+\end{thebibliography}
+\end{document}

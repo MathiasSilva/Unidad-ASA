@@ -118,6 +118,10 @@ fic   = FA(dir.i , "FIC" )
 
 areasocial = rbind.data.frame(ccee,fder,fcs,fhuce,fic,enba,eumus)
 areasocial = areasocial[,names(areasocial) != "X"]
+dim(areasocial)
+names(areasocial)
+areasocial = unique(areasocial)
+dim(areasocial)
 
-save(areasocial, file = "/home/grupos/asa/2017/6.FusionaArea/Panel_areasocial_v.1.0.RData")
-write.csv(areasocial,"/home/grupos/asa/2017/6.FusionaArea/Panel_areasocial_v.1.0.csv")
+save(areasocial, file = "/home/grupos/asa/2017/6.FusionaArea/areasocial_v.1.0.RData")
+write.csv(areasocial,"/home/grupos/asa/2017/6.FusionaArea/areasocial_v.1.0.csv")

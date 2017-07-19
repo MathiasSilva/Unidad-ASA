@@ -3,11 +3,7 @@
 ############################
 lee_gen = function(dir.i, j, anio1, anio2, dir.o){
   library(stringr)
-  setwd(paste("/home/grupos/asa/2017/1.Datos Originales/", j, sep=""))
   setwd(paste(as.character(dir.i), j, sep=""))
-  #Los anios anteriores ya estan convertidos.
-  #anio1 = 2015
-  #anio2 = 2017
   genactual = data.frame()
   for(i in seq(anio1,anio2,1))
   {
@@ -25,6 +21,7 @@ lee_gen = function(dir.i, j, anio1, anio2, dir.o){
     d$TEL      = str_trim(substr(d$estci,133,150))
     d = d[,c("ESTCI","DIGITO","NOMBRE","DIR","TEL","GEN")]
     d$SERVICIO = j
+    write.csv(d, paste(as.character(dir.o),j,"/g_genactual/g_gen",i,"_con.csv"))
     genactual = rbind(genactual,d)
   }
   return(genactual)
